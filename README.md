@@ -45,12 +45,26 @@
 ### Instalar el motor de bases de datos PostgreSQL usando Docker (para mas detalles ver el archivo)
 - docker-compose up -d
 
+### configurar la base de datos 
+- En el settings.py
+
+    DATABASES = {
+        'default': {
+            'ENGINE' : 'django.db.backends.postgresql_psycopg2',
+            'NAME' : 'productos',
+            'USER' : 'root',
+            'PASSWORD' : 'root',
+            'HOST' : 'localhost', #si tienes otra dirección host debes remplazar esta
+            'PORT' : '5432', #si lo dejas vacío tomara el puerto por default
+        }
+    }
+
 ## Crear el modelo de datos  en models.py (el archivo que se encuentra en el directorio nombre_app)
 - estrcutura: una clase para definir el nombre de la tabla y su atributos
     class Users(models.Model):
     nombre = models.CharField(max_length=100, default='DEFAULT VALUE')
     precio = models.CharField(max_length=20, default='DEFAULT VALUE')
-    stock = models.CharField(max_length=100, default='DEFAULT VALUE')
+    stock = models.TextChoices('Si Hay', 'No hay')
     img = models.FileField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
