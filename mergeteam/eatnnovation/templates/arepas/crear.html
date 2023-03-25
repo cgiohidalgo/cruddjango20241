@@ -1,0 +1,49 @@
+<head>
+ 
+    {# Cargamos la librería #} 
+    {% load bootstrap4 %} 
+  
+    {# CSS Bootstrap #} 
+    {% bootstrap_css %} 
+
+    {# Widget Tweaks #}
+    {% load widget_tweaks %}
+
+    {# Archivos #}
+    {% load static %} <!-- STATIC_URL -->
+  
+</head>
+<body>
+
+    <form method="post" enctype="multipart/form-data">
+    
+        <!-- Pasamos el 'csrf_token' de seguridad para poder crear un nuevo registro -->
+        {% csrf_token %}
+        
+        <!-- {{ form.as_p }} -->
+        <div class="form-group">
+            <label for="nombre" class="txt_negrita">Nombre</label>
+            {{ form.nombre|add_class:"form-control" }} <!-- Usamos la librería 'widget_tweaks' para crear esta caja de texto -->
+        </div>
+        <div class="form-group">
+            <label for="precio" class="txt_negrita">Precio</label>
+            {{ form.precio|add_class:"form-control" }} <!-- Usamos la librería 'widget_tweaks' para crear esta caja de texto --> 
+        </div>
+        <div class="form-group">
+            <label for="stock" class="txt_negrita">Stock</label>
+            {{ form.stock|add_class:"form-control" }} <!-- Usamos la librería 'widget_tweaks' para crear esta caja de texto -->
+        </div>
+        <div class="form-group">
+            <label for="img" class="txt_negrita">Imagen</label>
+            {{ form.img|add_class:"form-control mb-3" }} <!-- Usamos la librería 'widget_tweaks' para crear esta caja de texto -->
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+        <a href="./" type="submit" class="btn btn-primary">Cancelar</a>
+        
+    </form>
+    {# JS y jQuery Bootstrap #}
+    {% bootstrap_javascript jquery='full' %} 
+
+</body>
+

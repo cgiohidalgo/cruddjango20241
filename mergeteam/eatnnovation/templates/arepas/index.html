@@ -1,0 +1,62 @@
+<head>
+ 
+  {# Cargamos la librería #} 
+  {% load bootstrap4 %} 
+
+  {# CSS Bootstrap #} 
+  {% bootstrap_css %} </head>
+
+  {# Archivos #}
+  {% load static %} <!-- STATIC_URL -->
+
+</head>
+
+<body>
+  
+  <div align="left" class="btn_crear mb-3">
+    <a href="crear" type="button" class="btn btn-primary">Crear</a> <!-- Boton crear -->
+  </div>
+
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th width="35%">Nombre</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        <th>Imagen</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <!-- Recorremos los objetos o registros que tenemos en nuestra tabla 'postres' y los listamos -->
+    {% for arepas in object_list %}
+      <tr>
+        <td>{{ arepas.nombre }}</td>
+        <td>{{ arepas.precio }}</td>
+        <td>{{ arepas.stock }}</td>
+        <td><img src="{% static 'uploads/'%}{{arepas.img}}" alt="{{arepas.nombre}}" class="img-fluid" width="7%"></td>
+        <td>
+   
+          <!-- Usaremos un formulario que realizará la tarea de eliminar un registro o postre desde la misma tabla HTML -->                        
+          <form method="POST" action="eliminar/{{arepas.id}}">
+            {% csrf_token %}
+            <div class="btn-group">
+   
+              <!-- Creamos 3 botones que son ver, Editar y Eliminar, nos sirven para gestionar nuestros registros o postres -->
+              <a href="detalle/{{arepas.id}}" title="Ver" type="button" class="btn btn-success">Ver </a>
+              <a href="editar/{{arepas.id}}" title="Editar" type="button" class="btn btn-primary">Editar </a>
+              <button class="btn btn-danger" onclick="return eliminar();" type="submit">
+                Eliminar
+              </button>
+            </div>
+          </form>  
+        </td>
+      </tr>
+    {% endfor %}
+   
+    </tbody>
+  </table>
+  {# JS y jQuery Bootstrap #}
+  {% bootstrap_javascript jquery='full' %} 
+</body>
