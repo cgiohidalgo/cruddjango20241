@@ -1,5 +1,6 @@
 # Proyecto LS3 - 2023 - 1
 
+El modelo para el desarrollo de este CRUD, se toma del equipo MergeTeam, del curso LSIII 2023-1
 
 # Instalar python 3
 
