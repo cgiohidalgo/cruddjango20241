@@ -107,27 +107,23 @@ Cuando creamos este proyecto, Django nos generó un archivo llamado views.py (de
 
 ## Instanciar 6 utilidades necesarias para este proyecto, estas son reverse, messages y forms.
 
-#Instanciamos las vistas genéricas de Django 
+# Instanciamos el modelo 'Arepa' para poder usarlo en nuestras Vistas CRUD
+from .models import Arepa
 
-from django.views.generic import ListView, DetailView 
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
+#Instanciamos las vistas genéricas de Django
+from django.views.generic import ListView, DetailView from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 #Nos sirve para redireccionar despues de una acción revertiendo patrones de expresiones regulares
-
 from django.urls import reverse
- 
+
 #Habilitamos el uso de mensajes en Django
+from django.contrib import messages
 
-from django.contrib import messages 
- 
 #Habilitamos los mensajes para class-based views
+from django.contrib.messages.views import SuccessMessageMixin
 
-from django.contrib.messages.views import SuccessMessageMixin 
- 
 #Habilitamos los formularios en Django
-
 from django import forms
-
 
 ## Creare unas clases para poder usar las vistas genéricas de Django: ListView, DetailView, CreateView, UpdateView y DeleteView.
 
