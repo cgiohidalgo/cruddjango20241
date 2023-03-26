@@ -288,6 +288,9 @@ Siempre ddebe tenener un <head>  y un <body>,
 
       {# CSS Bootstrap #} 
       {% bootstrap_css %} </head>
+      
+      {# Widget Tweaks #}
+      {% load widget_tweaks %}
 
       {# Archivos #}
       {% load static %} <!-- STATIC_URL -->
@@ -365,7 +368,7 @@ cerar un nuevo registro o Arepa.
 
 {% filename %}
 
-   <form method="post" enctype="multipart/form-data">
+       <form method="post" enctype="multipart/form-data">
     
         <!-- Pasamos el 'csrf_token' de seguridad para poder crear un nuevo registro -->
         {% csrf_token %}
@@ -392,7 +395,7 @@ cerar un nuevo registro o Arepa.
         <a href="./" type="submit" class="btn btn-primary">Cancelar</a>
         
     </form>
-
+    
 ## deatalles.html 
 
 Dentro de esta vista vamos a mostrar los detalles de un archivo independientemente cada ves que el usuario haga clic en el botón Ver que se encuentra en la columna Acciones.
