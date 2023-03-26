@@ -107,13 +107,13 @@ Cuando creamos este proyecto, Django nos generó un archivo llamado views.py (de
 
 ## Instanciar 3 utilidades necesarias para este proyecto, estas son reverse, messages y forms.
 
-#Nos sirve para redireccionar despues de una acción revertiendo patrones de expresiones regulares 
+#Nos sirve para redireccionar despues de una acción revertiendo patrones de expresiones regulares\ 
 from django.urls import reverse
  
-#Habilitamos el uso de mensajes en Django
+#Habilitamos el uso de mensajes en Django\
 from django.contrib import messages 
  
-#Habilitamos los mensajes para class-based views 
+#Habilitamos los mensajes para class-based views\ 
 from django.contrib.messages.views import SuccessMessageMixin 
  
 #Habilitamos los formularios en Django\
