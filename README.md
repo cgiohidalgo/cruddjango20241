@@ -304,11 +304,64 @@ Siempre ddebe tenener un <head>  y un <body>,
       {% bootstrap_javascript jquery='full' %} 
     </body>
 
-## Crear el index.html 
+## index.html 
 
 Aqui se muestra la columna Acciones colocaré 3 botones que son Ver, Editar y Eliminar para cada registro o Arepa.
 
 Puedes ver en el código del archivo crear.html que estamos usando la librería widget_tweaks que instalamos previamente, esta librería nos permite gestionar nuestros formularios creados mediante Vistas Genéricas de Django.
+
+{% filename %}
+    
+    <div align="left" class="btn_crear mb-3">
+      <a href="crear" type="button" class="btn btn-primary">Crear</a> <!-- Boton crear -->
+    </div>
+  
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th width="35%">Nombre</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Imagen</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      <!-- Recorremos los objetos o registros que tenemos en nuestra tabla 'postres' y los listamos -->
+      {% for arepas in object_list %}
+        <tr>
+          <td>{{ arepas.nombre }}</td>
+          <td>{{ arepas.precio }}</td>
+          <td>{{ arepas.stock }}</td>
+          <td><img src="{% static 'uploads/'%}{{arepas.img}}" alt="{{arepas.nombre}}" class="img-fluid" width="7%"></td>
+          <td>
+     
+            <!-- Usaremos un formulario que realizará la tarea de eliminar un registro o postre desde la misma tabla HTML -->                        
+            <form method="POST" action="eliminar/{{arepas.id}}">
+              {% csrf_token %}
+              <div class="btn-group">
+     
+                <!-- Creamos 3 botones que son ver, Editar y Eliminar, nos sirven para gestionar nuestros registros o postres -->
+                <a href="detalle/{{arepas.id}}" title="Ver" type="button" class="btn btn-success">Ver </a>
+                <a href="editar/{{arepas.id}}" title="Editar" type="button" class="btn btn-primary">Editar </a>
+                <button class="btn btn-danger" onclick="return eliminar();" type="submit">
+                  Eliminar
+                </button>
+              </div>
+            </form>  
+          </td>
+        </tr>
+      {% endfor %}
+     
+      </tbody>
+    </table>
+    
+    
+## crear.html 
+
+cerar un nuevo registro o Arepa.
+
 
 {% filename %}
 
@@ -340,7 +393,7 @@ Puedes ver en el código del archivo crear.html que estamos usando la librería 
         
     </form>
 
-## Crear el deatlles.html 
+## deatalles.html 
 
 Dentro de esta vista vamos a mostrar los detalles de un archivo independientemente cada ves que el usuario haga clic en el botón Ver que se encuentra en la columna Acciones.
 
@@ -359,7 +412,7 @@ Dentro de esta vista vamos a mostrar los detalles de un archivo independientemen
         <a href="../" type="submit" class="btn btn-primary">Volver</a>
 
 
-## Crear  actualizar.html
+## actualizar.html
 
 {% filename %}
 
