@@ -194,7 +194,7 @@ Por último creo una clase con el nombre ArepaEliminar que hara uso de la vista 
 
 ## Instanciar las vistas genéricas de Django y mi modelo
 
-- Abrimos nombre_app -> views.py
+- Abrimos nombre_proyecto -> urls.py
 
 Dentro del archivo urls.py agrego las siguientes rutas dentro de urlpatterns = [], mediante estas rutas llamamos a una determinada vista HTML, estas vistas HTML las crearé más adelante.
 
