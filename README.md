@@ -116,7 +116,7 @@ from django.contrib import messages
 #Habilitamos los mensajes para class-based views 
 from django.contrib.messages.views import SuccessMessageMixin 
  
-#Habilitamos los formularios en Django
+#Habilitamos los formularios en Django\
 from django import forms
 
 
