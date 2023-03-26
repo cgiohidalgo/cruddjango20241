@@ -4,46 +4,76 @@
     {% load bootstrap4 %} 
   
     {# CSS Bootstrap #} 
-    {% bootstrap_css %} 
-
-    {# Widget Tweaks #}
-    {% load widget_tweaks %}
-
+    {% bootstrap_css %} </head>
+  
     {# Archivos #}
     {% load static %} <!-- STATIC_URL -->
   
-</head>
-<body>
+  </head>
+  
+  <body>
 
-    <form method="post" enctype="multipart/form-data">
+    {% if messages %}
+                <ul class="messages list-group mb-3">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }} list-group-item list-group-item-primary"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+    {% endif %}
     
-        <!-- Pasamos el 'csrf_token' de seguridad para poder crear un nuevo registro -->
-        {% csrf_token %}
-        
-        <!-- {{ form.as_p }} -->
-        <div class="form-group">
-            <label for="nombre" class="txt_negrita">Nombre</label>
-            {{ form.nombre|add_class:"form-control" }} <!-- Usamos la librería 'widget_tweaks' para crear esta caja de texto -->
-        </div>
-        <div class="form-group">
-            <label for="precio" class="txt_negrita">Precio</label>
-            {{ form.precio|add_class:"form-control" }} <!-- Usamos la librería 'widget_tweaks' para crear esta caja de texto --> 
-        </div>
-        <div class="form-group">
-            <label for="stock" class="txt_negrita">Stock</label>
-            {{ form.stock|add_class:"form-control" }} <!-- Usamos la librería 'widget_tweaks' para crear esta caja de texto -->
-        </div>
-        <div class="form-group">
-            <label for="img" class="txt_negrita">Imagen</label>
-            {{ form.img|add_class:"form-control mb-3" }} <!-- Usamos la librería 'widget_tweaks' para crear esta caja de texto -->
-        </div>
-        
-        <button type="submit" class="btn btn-primary">Aceptar</button>
-        <a href="./" type="submit" class="btn btn-primary">Cancelar</a>
-        
-    </form>
+    <div align="left" class="btn_crear mb-3">
+      <a href="crear" type="button" class="btn btn-primary">Crear</a> <!-- Boton crear -->
+    </div>
+  
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th width="35%">Nombre</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Imagen</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      <!-- Recorremos los objetos o registros que tenemos en nuestra tabla 'postres' y los listamos -->
+      {% for arepas in object_list %}
+        <tr>
+          <td>{{ arepas.nombre }}</td>
+          <td>{{ arepas.precio }}</td>
+          <td>{{ arepas.stock }}</td>
+          <td><img src="{% static 'uploads/'%}{{arepas.img}}" alt="{{arepas.nombre}}" class="img-fluid" width="7%"></td>
+          <td>
+     
+            <!-- Usaremos un formulario que realizará la tarea de eliminar un registro o postre desde la misma tabla HTML -->                        
+            <form method="POST" action="eliminar/{{arepas.id}}">
+              {% csrf_token %}
+              <div class="btn-group">
+     
+                <!-- Creamos 3 botones que son ver, Editar y Eliminar, nos sirven para gestionar nuestros registros o postres -->
+                <a href="detalle/{{arepas.id}}" title="Ver" type="button" class="btn btn-success">Ver </a>
+                <a href="editar/{{arepas.id}}" title="Editar" type="button" class="btn btn-primary">Editar </a>
+                <button class="btn btn-danger" onclick="return eliminar();" type="submit">
+                  Eliminar
+                </button>
+              </div>
+            </form>  
+          </td>
+        </tr>
+      {% endfor %}
+     
+      </tbody>
+    </table>
+    <script type="text/javascript">
+        function eliminar() {
+          var x = confirm("Eliminar Producto ?");
+          if (x)
+            return true;
+          else
+            return false;
+        }
+      </script>
     {# JS y jQuery Bootstrap #}
     {% bootstrap_javascript jquery='full' %} 
-
-</body>
-
+  </body>
