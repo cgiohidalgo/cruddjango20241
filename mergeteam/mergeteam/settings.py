@@ -138,6 +138,9 @@ MEDIA_URL = '/arepas/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'eatnnovation/static/uploads')
 
 
+# Activamos 'CookieStorage' que nos permite enviar los mensajes de respuesta al Crear, Eliminar y Actualizar un registro
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
