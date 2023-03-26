@@ -266,6 +266,9 @@ En el archivo settings.py:
     #Las rutas para las imágenes de cada registro o arepas 
     MEDIA_URL = '/arepas/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'arepas/static/uploads')
+    
+    # Activamos 'CookieStorage' que nos permite enviar los mensajes de respuesta al Crear, Eliminar y Actualizar un registro
+    MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
 ### Creación de html
 
