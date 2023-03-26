@@ -131,7 +131,7 @@ from django import forms
 
 {% filename %}
 
-    class ArepasListado(ListView):
+    class ArepaListado(ListView):
         model = Arepa # Llamamos a la clase 'Arepa' que se encuentra en nuestro archivo 'models.py' 
 
 ## Crear (Create)
