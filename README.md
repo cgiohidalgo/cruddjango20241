@@ -272,7 +272,37 @@ En el archivo settings.py:
 - En nombre_app -> creamos la carpeta "templates" 
     - creamos la carpeta "arepas" 
         - creamos actualizar.html, crear.html, detalles.html, index.html   
-       
+
+### Formato de un HTML
+
+Siempre ddebe tenener un <head>  y un <body>, 
+
+- en el head:
+
+{% filename %}
+
+    <head>
+
+      {# Cargamos la librería #} 
+      {% load bootstrap4 %} 
+
+      {# CSS Bootstrap #} 
+      {% bootstrap_css %} </head>
+
+      {# Archivos #}
+      {% load static %} <!-- STATIC_URL -->
+
+    </head>
+
+- en el body:
+
+{% filename %}
+    <body>
+    
+    <!-- Al final del body -->
+    {# JS y jQuery Bootstrap #}
+      {% bootstrap_javascript jquery='full' %} 
+    </body>
 
 ## Crear el index.html 
 
