@@ -1,4 +1,8 @@
-# Proyecto LS3 - 2023 - 1
+# MergeTeam 
+
+[![postgreSQL version](https://img.shields.io/badge/Django-v2.0_v3.0-purple.svg?style=flat-square)](https://www.postgresql.org/)
+
+## Proyecto LS III 
 
 El modelo para el desarrollo de este CRUD, se toma del equipo MergeTeam, del curso LSIII 2023-1
 
