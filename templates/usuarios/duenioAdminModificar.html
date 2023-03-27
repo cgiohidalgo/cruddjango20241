@@ -1,0 +1,64 @@
+{% extends 'baseAdmin.html' %}
+{% block content %}
+	
+<div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Modificar Administrador </h1>
+      </center>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        {% if usuarios %}
+        <form method="post" id="form" name="modificarAdmin">
+          {% csrf_token %} 
+          <div class="form-group">
+            <label for="nombreEmpleado">Nombre del administrador</label>
+              <select class="form-control" id="nombreEmpleado" name="nombreEmpleado">
+
+                {% for usuario in usuarios %}
+                  <option value="{{usuario.nombreUsuario}}">{{usuario.nombreUsuario}}</option>
+                  {% empty %}
+                  <p>No hay empleados</p>
+                {% endfor %}
+              </select>
+          </div>
+          <div class="form-group">
+            <label for ="claveAdmin">Nueva clave</label>
+            <input type="text" name="claveAdmin" id="claveAdmin" class="form-control" placeholder="Clave">
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                <input type="submit" name="modificarAdmin-submit" id="modificarAdmin-submit"  class="form-control btn btn-login" value="Modificar">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-lg-12">
+              </div>
+            </div>
+          </div>
+        </form>
+        {% else %}
+        
+            <p>
+                <div class="alert alert-info" role="alert">
+                    No hay administradores registrados
+                </div>
+            </p>
+        
+        {% endif %}
+                    
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

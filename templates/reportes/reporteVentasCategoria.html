@@ -1,0 +1,46 @@
+{% extends 'baseAdmin.html' %}
+
+
+{% block head %}
+
+{% load static %}
+
+<script src="{% static 'graficos/plotly.js' %}"></script>
+
+<script src="{% static 'css/registroCliente/jquery-3.3.1.slim.min.js' %}"></script>
+
+
+{% endblock %}
+
+{% block content %}
+<div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Reporte de Ventas por categoría </h1>      
+      </center>
+    </div>
+  </div>
+
+  <center>
+    <div id="tester" style="width:600px;height:300px;"></div>
+  </center>  
+
+    <script>
+      TESTER = document.getElementById('tester');
+      Plotly.plot( TESTER, [
+          {
+            x:{{datax|safe}},
+            y:{{datay}},
+            type: 'bar'
+          }
+        ], 
+        {
+          margin: { t: 0 } 
+        } 
+      );
+    </script>
+  </div>
+</div>  
+{% endblock %}

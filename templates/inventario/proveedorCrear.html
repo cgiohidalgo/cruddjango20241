@@ -1,0 +1,47 @@
+{% extends 'baseAdmin.html' %}
+
+{% block content %}
+
+<div class="col-md-6 col-md-offset-3">
+    <br>
+    <div class="panel-login panel">
+      <div class="panel-heading">
+        <center>
+          <h1> Añadir Proveedor </h1>
+        </center>
+      </div>
+    </div>
+  
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-12">
+                <form id="formulario-proveedor" action="#" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="inputNitProveedor">Nit del proveedor</label>
+                        <input required id="inputNitProveedor" name="nitProveedor" type="text" class="form-control" placeholder="Nit del proveedor" value={{nit}}>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDireccionProveedor">Dirección del proveedor</label>
+                        <input required id="inputDireccionProveedor" name="direccionProveedor" type="text" class="form-control" placeholder="Dirección del proveedor" value={{direccion}}>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputTelefonoProveedor">Teléfono del proveedor</label>
+                        <input required id="inputTelefonoProveedor" name="telefonoProveedor" type="text" class="form-control" placeholder="Teléfono del proveedor" value={{telefono}}>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3">
+                                <input type="submit" name="aniadirProveedor" id="proveedor-submit" tabindex="4" class="form-control btn" value="Añadir Provedor">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </form>
+                        
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

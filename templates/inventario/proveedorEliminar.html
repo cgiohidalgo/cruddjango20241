@@ -1,0 +1,62 @@
+{% extends 'baseAdmin.html' %}
+{% block content %}
+	
+<div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Modificar Proveedor </h1>
+      </center>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        {% if proveedores %}
+        <form method="post" id="form" name="modificarProveedor">
+          {% csrf_token %} 
+          <div class="form-group">
+            <label for="nitProveedor">Seleccione el NIT del proveedor a eliminar</label>
+            <select class="form-control" id="nitProveedor" name="nitProveedor">
+              <option value="no elegido" name="comboBoxProveedor">Proveedor</option>
+                {% for proveedor in proveedores %}
+                  <option value="{{proveedor.pknit}}" name="{{proveedor.pknit}}">{{proveedor.pknit}}</option>
+                  {% empty %}
+                  <p>No hay proveedores</p>
+                {% endfor %}
+              </select>
+          </div>
+          
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                <input type="submit" class="form-control btn btn-login" value="Eliminar">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-lg-12">
+              </div>
+            </div>
+          </div>
+        </form>
+        {% else %}
+        
+            <p>
+                <div class="alert alert-info" role="alert">
+                    No hay proveedores registrados
+                </div>
+            </p>
+        
+        {% endif %}
+                    
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

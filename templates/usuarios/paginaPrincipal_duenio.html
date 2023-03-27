@@ -1,0 +1,36 @@
+{% extends 'baseAdmin.html' %}
+
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/section.css' %}">
+
+<!-- contact  -->
+<div class="col-md-6 col-md-offset-3">
+  <!-- class="col-md-6 col-md-offset-3" -->
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> BIENVENIDO </h1>
+      </center>
+    </div>
+  </div>
+  <div class="ps-section--offer">
+    <!-- <div class="ps-column"><a class="ps-offer" href="product-listing.html"><img src="images/banner/home-banner-1.png" alt=""></a></div>-->
+    <div class="ps-column" style="padding: 5px"><a class="ps-offer" href="{% url 'usuarios:duenioAdminMenu' %}"><img src="{% static 'images/principal_admin_duenio/empleados.png' %}" alt=""></a></div>
+    <div class="ps-column" style="padding: 5px"><a class="ps-offer"><img src="{% static 'images/principal_admin_duenio/clientes.png' %}" alt=""></a></div>
+  </div>
+  <div class="ps-section--offer">
+    <div class="ps-column" style="padding: 5px"><a class="ps-offer" href="{% url 'inventario:categoria' %}"><img src="{% static 'images/principal_admin_duenio/categorias.png' %}" alt=""></a></div>
+    <div class="ps-column" style="padding: 5px"><a class="ps-offer" href="{% url 'inventario:bodegainicio' %}"><img src="{% static 'images/principal_admin_duenio/bodegas.png' %}" alt=""></a></div>
+  </div>
+  <div class="ps-section--offer-one">
+    <div class="ps-column-one" style="padding: 5px"><a class="ps-offer-one" href="{% url 'reportes:inicioReportes' %}"><img src="{% static 'images/principal_admin_duenio/reportes.png' %}" alt=""></a></div>
+  </div>
+  <br>
+</div>
+
+
+{% endblock %}

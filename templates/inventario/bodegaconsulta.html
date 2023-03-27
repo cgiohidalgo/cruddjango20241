@@ -1,0 +1,59 @@
+{% extends 'baseAdmin.html' %}
+
+
+{% block head %}
+
+{% load static %}
+
+{% endblock %}
+
+{% block content %}
+<div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Consultar Bodega </h1>
+      </center>
+    </div>
+  </div>
+  
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        <form id="login-form" name='crearBodega' method="post">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="bodega">Bodega</label>
+            <select class="form-control" id="bodega" name="bodega" onChange="form.submit();"> <!--onChange="form.submit();"-->
+              <option value="-1"  name='vacio'>Bodega</option>
+              {% for bodega in bodegas %}
+                <option value={{bodega.pkBodega}} name={{bodega.pkBodega}}>{{bodega.pkBodega}} - {{bodega.ciudad}}</option>
+                {% empty %}
+                {% endfor %}
+            </select>
+          </div>
+
+          <!--<div class="form-group">    POR SI SE QUIERE QUE SEA CON BOTÓN
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                <input type="submit" name="submit" id="submit" tabindex="4" class="form-control btn btn-register" value="Consultar">
+              </div>
+            </div>
+          </div>-->
+
+          <div class="form-group">
+            <label for="Ciudad">Ciudad</label>
+            <input type="text" readonly name="Ciudad" id="Ciudad" tabindex="1" class="form-control" placeholder="Ciudad" value="{{ciudadBodega}}">
+          </div>
+
+          <div class="form-group">
+              <label for="direccion">Dirección</label>
+              <input type="text" readonly name="direccion" id="direccion" tabindex="1" class="form-control" placeholder="Direccion" value="{{dirBodega}}">
+          </div>          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends 'baseAdmin.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<script src="{% static 'css/registroCliente/jquery-3.3.1.slim.min.js' %}"></script>
+<!-- Fengyuan Chen's Datepicker -->
+<link rel="stylesheet" href="{% static 'css/registroCliente/datepicker.min.css' %}" />
+<script src="{% static 'css/registroCliente/datepicker.min.js' %}"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3" style="padding: 75px">
+        <div class="panel-login panel">
+          <div class="panel-heading">
+            <center>
+              <h1> Crear Descuento </h1>
+            </center>
+          </div>
+        </div>
+        <div class="panel-body" >
+          <div class="row">
+            <div class="col-lg-12">
+              <form id="login-form" name='crearDescuento' method="post">
+                  {% csrf_token %}
+
+                  <div class="form-group">
+                    <label for="categoria">Categoria</label>
+                    <select class="form-control" id="categoria" name="categoria" onclick="javascript:location.href = this.value;">
+                        <option selected value="{% url 'ventas:descuentoCrear'%}" >Seleccione una Categoria</option>
+                        {% for cat in categorias %}
+                          {% if categoria == cat.pkCategoria  %}
+                            <option selected value="{% url 'ventas:descuentoCrearCategoria' idCategoria=cat.pkCategoria %}" >{{cat.nombreCategoria}}</option>
+                          {% else %}
+                            <option value="{% url 'ventas:descuentoCrearCategoria' idCategoria=cat.pkCategoria %}" >{{cat.nombreCategoria}}</option>
+                          {% endif %}
+                        {% endfor %}
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="subcategoria">SubCategoria</label>
+                    <select class="form-control" id="subcategoria" name="subcategoria" onclick="javascript:location.href = this.value;">
+                        <option selected value="{% url 'ventas:descuentoCrearCategoria' idCategoria=categoria%}">Seleccione una subcatergoria</option>
+                        {% for subcat in subcategorias %}
+                          {% if subcategoria == subcat.pkSubCategoria %}
+                            <option selected value="{% url 'ventas:descuentoCrearSubCategoria' idCategoria=categoria idSubCategoria=subcat.pkSubCategoria %}">{{subcat.nombreSubCategoria}}</option>
+                          {% else %}
+                            <option value="{% url 'ventas:descuentoCrearSubCategoria' idCategoria=categoria idSubCategoria=subcat.pkSubCategoria %}">{{subcat.nombreSubCategoria}}</option>
+                          {% endif %}
+                        {% endfor %}
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="ciudad">Producto</label>
+                    <select class="form-control" id="producto" name="producto" onclick="javascript:location.href = this.value;">
+                        <option selected value="{% url 'ventas:descuentoCrearSubCategoria' idCategoria=categoria idSubCategoria=subcategoria %}">Seleccione un producto</option>
+                        {% for prod in productos %}
+                          {% if producto == prod.pkProducto %}
+                            <option selected value="{% url 'ventas:descuentoCrearProducto' idCategoria=categoria idSubCategoria=subcategoria idProducto=prod.pkProducto %}">{{prod.nombre}}</option>
+                          {% else %}
+                            <option value="{% url 'ventas:descuentoCrearProducto' idCategoria=categoria idSubCategoria=subcategoria idProducto=prod.pkProducto %}">{{prod.nombre}}</option>
+                          {% endif %}
+                        {% endfor %}
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="fecha_inicio">Fecha de inicio</label>
+                      <input id="fecha_inicio" name='fecha_inicio' class="form-control">
+                      <script>
+                        $(function () {
+                          $("#fecha_inicio").datepicker({format:'yyyy-mm-dd'},);
+                        });
+                      </script>
+                      <label for="fecha_fin">Fecha de fin</label>
+                      <input id="fecha_fin" name='fecha_fin' class="form-control">
+                      <script>
+                        $(function () {
+                          $("#fecha_fin").datepicker({format:'yyyy-mm-dd'},);
+                        });
+                      </script>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="descuento"> Descuento</Label>
+                    <input id="descuento" name='descuento' class="form-control">
+                  </div>
+                  
+                  <div class="form-group">
+                      <div class="row">
+                          <div class="col-sm-6 col-sm-offset-3">
+                              <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Crear">
+                          </div>
+                      </div>
+                  </div>
+
+              </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

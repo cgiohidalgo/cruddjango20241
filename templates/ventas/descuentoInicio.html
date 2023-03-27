@@ -1,0 +1,33 @@
+{% extends 'baseAdmin.html' %}
+
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/section.css' %}">
+
+<!-- contact  -->
+<div class="col-md-6 col-md-offset-3">
+  <!-- class="col-md-6 col-md-offset-3" -->
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h2> Gestion de Descuentos </h2>
+      </center>
+    </div>
+  </div>
+
+  <div class="ps-section--offer">
+    <!-- <div class="ps-column"><a class="ps-offer" href="product-listing.html"><img src="images/banner/home-banner-1.png" alt=""></a></div>-->
+    <div class="ps-column" style="padding: 5px"><a class="ps-offer" href="{% url 'ventas:descuentoCrear' %}"><img src="{% static 'images/paginaPrincipal_duenio/crear.png' %}" alt=""></a></div>
+    <div class="ps-column" style="padding: 5px"><a class="ps-offer" href="{% url 'ventas:descuentoModificar' %}"><img src="{% static 'images/paginaPrincipal_duenio/consultar.png' %}" alt=""></a></div>
+    
+  </div>
+  <div class="ps-section--offer">
+  </div>
+  <br>
+</div> 
+
+
+{% endblock %}

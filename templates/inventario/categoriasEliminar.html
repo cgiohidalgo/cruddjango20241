@@ -1,0 +1,55 @@
+{% extends 'baseAdmin.html' %}
+
+{% block content %}
+
+{% load static %}
+<div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Eliminar Categorias </h1>
+      </center>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        <form id="formulario-producto" action="#" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="categoria">Categoria</label>
+            <select class="form-control" id="categoria" name="categoria" value="{{categoria}}" onChange="form.submit();">
+                <option value="-1" name="-1">Categoria</option>
+              {% for cat in categorias %}
+                {% if idcategoria == cat.pkCategoria   %}
+                  <option selected value={{cat.pkCategoria}} name={{cat.nombreCategoria}}>{{cat.nombreCategoria}}</option>
+                {% else %}
+                  <option value={{cat.pkCategoria}} name={{cat.nombreCategoria}}>{{cat.nombreCategoria}}</option>
+                {% endif %}
+              {% endfor %}
+            </select>
+          </div>          
+          
+          <div class="form-group">
+            <div class="custom-file">
+              <label for="buscadorImagen">Imagen</label>
+              <img name="actualImg" id="actualImg" src="{{rutaImagenO}}">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                <input type="submit" name="categoria-submit" id="categoria-submit" tabindex="4" class="form-control btn" value="Eliminar Categoria">
+              </div>
+            </div>
+          </div>                  
+        </form>
+      </div>
+    </div>    
+  </div>
+</div>
+
+{% endblock %}

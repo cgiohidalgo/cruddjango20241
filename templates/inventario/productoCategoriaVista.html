@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% load static %}
+
+{% endblock %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/section.css' %}">
+<div style="padding: 5px">
+    <div id="column-left" class="col-sm-4 col-lg-3 " >
+        <div id="category-menu" class="navbar collapse in mb_40" aria-expanded="true" role="button">
+        <div class="nav-responsive">
+            <div class="heading-part">
+            <h2 class="main_title" >SUBCATEGORIAS</h2>
+            </div>
+            {% for sub in subCategorias %}
+                <ul class="nav  main-navigation collapse in">
+                    <li><a href="{% url 'inventario:productosSubCategorias' nombre=nombre categoria=categoria subCategoria=sub.pkSubCategoria %}" style="padding: 2px; background-color: white;">{{sub.nombreSubCategoria}}</a></li>
+                </ul>
+            {% endfor %}
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-8 col-lg-9 mtb_20">
+    <div class="row">
+    {%for producto in productos %}
+    <div class="product-layout  product-grid  col-md-4 col-sm-6 col-xs-12">
+        <span href=>
+        <div class="item">
+        <div class="product-thumb clearfix mb_30">
+            <div class="image product-imageblock">
+                <img src="{{producto.rutaImagen.url}}" title="Producto" class="img-responsive">
+                <a href="{% url 'inventario:productoDetalles' nombre=nombre categoria=categoria idproducto=producto.pkProducto precio=producto.precio%}">
+                    <input type="button" 
+                           id="{{producto.pkProducto}}"
+                           class="form-control btn btn-register"
+                           value="Ver"
+                           style="position:absolute; top:10px; right: 10px; width: 75px; height: 40px;">
+                    </input>
+                </a>
+            </div>
+            <div class="caption product-detail text-center">
+            <h6 data-name="product_name" class="product-name mt_20"><a href="{% url 'inventario:productoDetalles' nombre=nombre categoria=categoria idproducto=producto.pkProducto precio=producto.precio%}" title="{{producto.nombre}}">{{producto.nombre}} - {{producto.pkProducto}}</a></h6>
+            <span class="price"><span class="amount"><span class="currencySymbol">$</span>{{producto.precio}}</span></span>
+            </div>
+        </div>
+        </div>
+        </span>
+    </div>
+    {% endfor %}
+    </div> 
+    </div>        
+</div>
+
+{% endblock %}

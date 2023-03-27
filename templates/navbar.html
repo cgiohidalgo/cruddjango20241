@@ -1,0 +1,31 @@
+{% load static %}
+
+<link href="{% static 'css/navbar.css' %}"  rel="stylesheet">
+
+<ul>
+  <li>
+    <a href="{% url 'usuarios:inicioCliente' nombre=nombre %}" style="padding: 1px; background-color: white;">
+      <img style="padding: 7px; height:45px; width: 120px" src="{% static 'images/nova.jpg' %}"/>
+    </a>
+  </li>
+  {% for categoria in categorias %}
+      <li><a href="{% url 'inventario:productosCategorias' nombre=nombre categoria=categoria.pkCategoria %}">{{categoria.nombreCategoria}}</a></li>
+      {% empty %}
+  {% endfor %}
+  <li style="float:right"><a class="active" href="{% url 'usuarios:cerrarsesion' %}">Cerrar Sesion</a></li>
+  {% if nombre == 'noRegistrado' %}  
+  <li style="float:right"><a class="active" href="{% url 'usuarios:ingreso' %}">Iniciar Sesion</a></li>
+  {% endif%}
+
+  {% if nombre != 'noRegistrado' %}  
+  <li style="float:right">
+    <a class="active" href="{% url 'usuarios:clienteCarrito' nombre %}">
+        <img src="{% static 'images/Iconos/ShoppingCart_Small.png' %}" width="20" height="20">
+      Mi Carrito 
+    </a>
+  </li>
+  <li style="float:right"><a class="active" href="{% url 'usuarios:clientePerfil' nombre %}"> Perfil </a></li>
+  {% endif%}
+
+  
+</ul>

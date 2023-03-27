@@ -1,0 +1,2684 @@
+[
+{
+  "model": "ventas.descuentoproducto",
+  "pk": 1,
+  "fields": {
+    "fkProducto": 15,
+    "fechaInicio": "2019-08-17",
+    "fechaFin": "2019-08-20",
+    "porcentajeDescuento": 3.0
+  }
+},
+{
+  "model": "ventas.descuentoproducto",
+  "pk": 2,
+  "fields": {
+    "fkProducto": 30,
+    "fechaInicio": "2019-08-17",
+    "fechaFin": "2019-08-20",
+    "porcentajeDescuento": 3.0
+  }
+},
+{
+  "model": "ventas.descuentoproducto",
+  "pk": 3,
+  "fields": {
+    "fkProducto": 15,
+    "fechaInicio": "2016-08-17",
+    "fechaFin": "2017-08-19",
+    "porcentajeDescuento": 99.0
+  }
+},
+{
+  "model": "ventas.descuentoproducto",
+  "pk": 4,
+  "fields": {
+    "fkProducto": 30,
+    "fechaInicio": "2016-08-17",
+    "fechaFin": "2017-08-19",
+    "porcentajeDescuento": 99.0
+  }
+},
+{
+  "model": "ventas.descuentocategoria",
+  "pk": 1,
+  "fields": {
+    "fkCategoria": 2,
+    "fechaInicio": "2019-07-17",
+    "fechaFin": "2019-08-20",
+    "porcentajeDescuento": 15.0
+  }
+},
+{
+  "model": "ventas.descuentocategoria",
+  "pk": 2,
+  "fields": {
+    "fkCategoria": 2,
+    "fechaInicio": "2019-07-17",
+    "fechaFin": "2019-08-20",
+    "porcentajeDescuento": 15.0
+  }
+},
+{
+  "model": "ventas.descuentocategoria",
+  "pk": 3,
+  "fields": {
+    "fkCategoria": 2,
+    "fechaInicio": "2019-07-17",
+    "fechaFin": "2019-08-20",
+    "porcentajeDescuento": 15.0
+  }
+},
+{
+  "model": "ventas.descuentocategoria",
+  "pk": 4,
+  "fields": {
+    "fkCategoria": 1,
+    "fechaInicio": "2019-07-17",
+    "fechaFin": "2019-08-20",
+    "porcentajeDescuento": 2.0
+  }
+},
+{
+  "model": "ventas.descuentocategoria",
+  "pk": 5,
+  "fields": {
+    "fkCategoria": 2,
+    "fechaInicio": "2016-07-17",
+    "fechaFin": "2017-07-18",
+    "porcentajeDescuento": 99.0
+  }
+},
+{
+  "model": "ventas.descuentocategoria",
+  "pk": 6,
+  "fields": {
+    "fkCategoria": 2,
+    "fechaInicio": "2016-07-17",
+    "fechaFin": "2017-08-20",
+    "porcentajeDescuento": 99.0
+  }
+},
+{
+  "model": "ventas.descuentocategoria",
+  "pk": 7,
+  "fields": {
+    "fkCategoria": 1,
+    "fechaInicio": "2016-07-17",
+    "fechaFin": "2017-07-18",
+    "porcentajeDescuento": 99.0
+  }
+},
+{
+  "model": "ventas.descuentocategoria",
+  "pk": 8,
+  "fields": {
+    "fkCategoria": 2,
+    "fechaInicio": "2016-07-17",
+    "fechaFin": "2017-08-20",
+    "porcentajeDescuento": 99.0
+  }
+},
+{
+  "model": "ventas.descuentosubcategoria",
+  "pk": 1,
+  "fields": {
+    "fkSubCategoria": 6,
+    "fechaInicio": "2019-07-17",
+    "fechaFin": "2019-08-20",
+    "porcentajeDescuento": 1.0
+  }
+},
+{
+  "model": "ventas.descuentosubcategoria",
+  "pk": 2,
+  "fields": {
+    "fkSubCategoria": 4,
+    "fechaInicio": "2019-07-17",
+    "fechaFin": "2019-08-20",
+    "porcentajeDescuento": 2.0
+  }
+},
+{
+  "model": "ventas.descuentosubcategoria",
+  "pk": 3,
+  "fields": {
+    "fkSubCategoria": 2,
+    "fechaInicio": "2019-07-17",
+    "fechaFin": "2019-08-20",
+    "porcentajeDescuento": 3.0
+  }
+},
+{
+  "model": "ventas.descuentosubcategoria",
+  "pk": 4,
+  "fields": {
+    "fkSubCategoria": 3,
+    "fechaInicio": "2019-07-17",
+    "fechaFin": "2019-08-20",
+    "porcentajeDescuento": 15.0
+  }
+},
+{
+  "model": "ventas.descuentosubcategoria",
+  "pk": 5,
+  "fields": {
+    "fkSubCategoria": 13,
+    "fechaInicio": "2019-07-17",
+    "fechaFin": "2019-08-20",
+    "porcentajeDescuento": 2.0
+  }
+},
+{
+  "model": "ventas.descuentosubcategoria",
+  "pk": 6,
+  "fields": {
+    "fkSubCategoria": 5,
+    "fechaInicio": "2016-07-17",
+    "fechaFin": "2017-07-18",
+    "porcentajeDescuento": 99.0
+  }
+},
+{
+  "model": "ventas.descuentosubcategoria",
+  "pk": 7,
+  "fields": {
+    "fkSubCategoria": 6,
+    "fechaInicio": "2016-07-17",
+    "fechaFin": "2017-07-18",
+    "porcentajeDescuento": 99.0
+  }
+},
+{
+  "model": "ventas.descuentosubcategoria",
+  "pk": 8,
+  "fields": {
+    "fkSubCategoria": 4,
+    "fechaInicio": "2016-07-17",
+    "fechaFin": "2017-07-18",
+    "porcentajeDescuento": 99.0
+  }
+},
+{
+  "model": "ventas.descuentosubcategoria",
+  "pk": 9,
+  "fields": {
+    "fkSubCategoria": 2,
+    "fechaInicio": "2016-07-17",
+    "fechaFin": "2017-07-18",
+    "porcentajeDescuento": 99.0
+  }
+},
+{
+  "model": "ventas.descuentosubcategoria",
+  "pk": 10,
+  "fields": {
+    "fkSubCategoria": 3,
+    "fechaInicio": "2016-07-17",
+    "fechaFin": "2017-08-20",
+    "porcentajeDescuento": 99.0
+  }
+},
+{
+  "model": "ventas.descuentosubcategoria",
+  "pk": 11,
+  "fields": {
+    "fkSubCategoria": 13,
+    "fechaInicio": "2016-07-17",
+    "fechaFin": "2017-07-18",
+    "porcentajeDescuento": 99.0
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 1,
+  "fields": {
+    "fkCliente": "Felipe",
+    "fecha": "2019-07-01"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 2,
+  "fields": {
+    "fkCliente": "Felipe",
+    "fecha": "2019-07-05"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 3,
+  "fields": {
+    "fkCliente": "Felipe",
+    "fecha": "2019-07-10"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 4,
+  "fields": {
+    "fkCliente": "Felipe",
+    "fecha": "2019-07-12"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 5,
+  "fields": {
+    "fkCliente": "Felipe",
+    "fecha": "2019-07-13"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 6,
+  "fields": {
+    "fkCliente": "Felipe",
+    "fecha": "2019-07-18"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 7,
+  "fields": {
+    "fkCliente": "Felipe",
+    "fecha": "2019-07-18"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 8,
+  "fields": {
+    "fkCliente": "Felipe",
+    "fecha": "2019-07-20"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 9,
+  "fields": {
+    "fkCliente": "Felipe",
+    "fecha": "2019-07-22"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 10,
+  "fields": {
+    "fkCliente": "Felipe",
+    "fecha": "2019-07-23"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 11,
+  "fields": {
+    "fkCliente": "Jaime",
+    "fecha": "2019-07-02"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 12,
+  "fields": {
+    "fkCliente": "Jaime",
+    "fecha": "2019-07-03"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 13,
+  "fields": {
+    "fkCliente": "Jaime",
+    "fecha": "2019-07-07"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 14,
+  "fields": {
+    "fkCliente": "Jaime",
+    "fecha": "2019-07-08"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 15,
+  "fields": {
+    "fkCliente": "Sara",
+    "fecha": "2019-07-01"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 16,
+  "fields": {
+    "fkCliente": "Sara",
+    "fecha": "2019-07-01"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 17,
+  "fields": {
+    "fkCliente": "Sara",
+    "fecha": "2019-07-01"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 18,
+  "fields": {
+    "fkCliente": "Sara",
+    "fecha": "2019-07-05"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 19,
+  "fields": {
+    "fkCliente": "Sara",
+    "fecha": "2019-07-05"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 20,
+  "fields": {
+    "fkCliente": "Sara",
+    "fecha": "2019-07-07"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 21,
+  "fields": {
+    "fkCliente": "Sara",
+    "fecha": "2019-07-07"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 22,
+  "fields": {
+    "fkCliente": "Sara",
+    "fecha": "2019-07-07"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 23,
+  "fields": {
+    "fkCliente": "Sara",
+    "fecha": "2019-07-12"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 24,
+  "fields": {
+    "fkCliente": "Sara",
+    "fecha": "2019-07-12"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 25,
+  "fields": {
+    "fkCliente": "Natalia",
+    "fecha": "2019-07-21"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 26,
+  "fields": {
+    "fkCliente": "Natalia",
+    "fecha": "2019-07-21"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 27,
+  "fields": {
+    "fkCliente": "Natalia",
+    "fecha": "2019-07-21"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 28,
+  "fields": {
+    "fkCliente": "Natalia",
+    "fecha": "2019-07-23"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 29,
+  "fields": {
+    "fkCliente": "Natalia",
+    "fecha": "2019-07-23"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 30,
+  "fields": {
+    "fkCliente": "Natalia",
+    "fecha": "2019-07-26"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 31,
+  "fields": {
+    "fkCliente": "Natalia",
+    "fecha": "2019-07-26"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 32,
+  "fields": {
+    "fkCliente": "Natalia",
+    "fecha": "2019-07-26"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 33,
+  "fields": {
+    "fkCliente": "Natalia",
+    "fecha": "2019-07-27"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 34,
+  "fields": {
+    "fkCliente": "Natalia",
+    "fecha": "2019-07-29"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 35,
+  "fields": {
+    "fkCliente": "Maria Jose",
+    "fecha": "2019-07-21"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 36,
+  "fields": {
+    "fkCliente": "Maria Jose",
+    "fecha": "2019-07-21"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 37,
+  "fields": {
+    "fkCliente": "Maria Jose",
+    "fecha": "2019-07-21"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 38,
+  "fields": {
+    "fkCliente": "Maria Jose",
+    "fecha": "2019-07-23"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 39,
+  "fields": {
+    "fkCliente": "Maria Jose",
+    "fecha": "2019-07-23"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 40,
+  "fields": {
+    "fkCliente": "Maria Jose",
+    "fecha": "2019-07-26"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 41,
+  "fields": {
+    "fkCliente": "Maria Jose",
+    "fecha": "2019-07-26"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 42,
+  "fields": {
+    "fkCliente": "Maria Jose",
+    "fecha": "2019-07-26"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 43,
+  "fields": {
+    "fkCliente": "Maria Jose",
+    "fecha": "2019-07-27"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 44,
+  "fields": {
+    "fkCliente": "Maria Jose",
+    "fecha": "2019-07-29"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 45,
+  "fields": {
+    "fkCliente": "Camila",
+    "fecha": "2019-06-21"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 46,
+  "fields": {
+    "fkCliente": "Camila",
+    "fecha": "2019-06-21"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 47,
+  "fields": {
+    "fkCliente": "Camila",
+    "fecha": "2019-06-21"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 48,
+  "fields": {
+    "fkCliente": "Camila",
+    "fecha": "2019-06-23"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 49,
+  "fields": {
+    "fkCliente": "Camila",
+    "fecha": "2019-06-23"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 50,
+  "fields": {
+    "fkCliente": "Camila",
+    "fecha": "2019-06-26"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 51,
+  "fields": {
+    "fkCliente": "Camila",
+    "fecha": "2019-06-26"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 52,
+  "fields": {
+    "fkCliente": "Camila",
+    "fecha": "2019-06-26"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 53,
+  "fields": {
+    "fkCliente": "Camila",
+    "fecha": "2019-06-27"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 54,
+  "fields": {
+    "fkCliente": "Camila",
+    "fecha": "2019-06-29"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 55,
+  "fields": {
+    "fkCliente": "Laura",
+    "fecha": "2019-06-19"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 56,
+  "fields": {
+    "fkCliente": "Laura",
+    "fecha": "2019-06-19"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 57,
+  "fields": {
+    "fkCliente": "Laura",
+    "fecha": "2019-06-19"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 58,
+  "fields": {
+    "fkCliente": "Laura",
+    "fecha": "2019-06-23"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 59,
+  "fields": {
+    "fkCliente": "Laura",
+    "fecha": "2019-06-23"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 60,
+  "fields": {
+    "fkCliente": "Laura",
+    "fecha": "2019-06-26"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 61,
+  "fields": {
+    "fkCliente": "Laura",
+    "fecha": "2019-06-26"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 62,
+  "fields": {
+    "fkCliente": "Laura",
+    "fecha": "2019-06-26"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 63,
+  "fields": {
+    "fkCliente": "Laura",
+    "fecha": "2019-06-27"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 64,
+  "fields": {
+    "fkCliente": "Laura",
+    "fecha": "2019-06-29"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 65,
+  "fields": {
+    "fkCliente": "Marcela",
+    "fecha": "2019-05-19"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 66,
+  "fields": {
+    "fkCliente": "Marcela",
+    "fecha": "2019-05-19"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 67,
+  "fields": {
+    "fkCliente": "Marcela",
+    "fecha": "2019-05-19"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 68,
+  "fields": {
+    "fkCliente": "Marcela",
+    "fecha": "2019-05-23"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 69,
+  "fields": {
+    "fkCliente": "Marcela",
+    "fecha": "2019-05-23"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 70,
+  "fields": {
+    "fkCliente": "Marcela",
+    "fecha": "2019-05-26"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 71,
+  "fields": {
+    "fkCliente": "Marcela",
+    "fecha": "2019-05-26"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 72,
+  "fields": {
+    "fkCliente": "Marcela",
+    "fecha": "2019-05-26"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 73,
+  "fields": {
+    "fkCliente": "Marcela",
+    "fecha": "2019-05-27"
+  }
+},
+{
+  "model": "ventas.factura",
+  "pk": 74,
+  "fields": {
+    "fkCliente": "Marcela",
+    "fecha": "2019-05-29"
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 1,
+  "fields": {
+    "fkFactura": 1,
+    "fkDetallesP": 1,
+    "cantidad": 2,
+    "precio": 56000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 2,
+  "fields": {
+    "fkFactura": 1,
+    "fkDetallesP": 9,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 3,
+  "fields": {
+    "fkFactura": 2,
+    "fkDetallesP": 2,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 4,
+  "fields": {
+    "fkFactura": 2,
+    "fkDetallesP": 10,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 5,
+  "fields": {
+    "fkFactura": 3,
+    "fkDetallesP": 3,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 6,
+  "fields": {
+    "fkFactura": 3,
+    "fkDetallesP": 11,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 7,
+  "fields": {
+    "fkFactura": 4,
+    "fkDetallesP": 4,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 8,
+  "fields": {
+    "fkFactura": 4,
+    "fkDetallesP": 5,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 9,
+  "fields": {
+    "fkFactura": 5,
+    "fkDetallesP": 6,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 10,
+  "fields": {
+    "fkFactura": 5,
+    "fkDetallesP": 7,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 11,
+  "fields": {
+    "fkFactura": 6,
+    "fkDetallesP": 8,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 12,
+  "fields": {
+    "fkFactura": 7,
+    "fkDetallesP": 29,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 13,
+  "fields": {
+    "fkFactura": 8,
+    "fkDetallesP": 30,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 14,
+  "fields": {
+    "fkFactura": 9,
+    "fkDetallesP": 31,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 15,
+  "fields": {
+    "fkFactura": 10,
+    "fkDetallesP": 32,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 16,
+  "fields": {
+    "fkFactura": 11,
+    "fkDetallesP": 1,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 17,
+  "fields": {
+    "fkFactura": 11,
+    "fkDetallesP": 9,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 18,
+  "fields": {
+    "fkFactura": 12,
+    "fkDetallesP": 2,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 19,
+  "fields": {
+    "fkFactura": 13,
+    "fkDetallesP": 3,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 20,
+  "fields": {
+    "fkFactura": 14,
+    "fkDetallesP": 4,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 21,
+  "fields": {
+    "fkFactura": 14,
+    "fkDetallesP": 5,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 22,
+  "fields": {
+    "fkFactura": 15,
+    "fkDetallesP": 13,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 23,
+  "fields": {
+    "fkFactura": 15,
+    "fkDetallesP": 14,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 24,
+  "fields": {
+    "fkFactura": 16,
+    "fkDetallesP": 15,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 25,
+  "fields": {
+    "fkFactura": 17,
+    "fkDetallesP": 16,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 26,
+  "fields": {
+    "fkFactura": 18,
+    "fkDetallesP": 17,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 27,
+  "fields": {
+    "fkFactura": 19,
+    "fkDetallesP": 18,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 28,
+  "fields": {
+    "fkFactura": 20,
+    "fkDetallesP": 19,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 29,
+  "fields": {
+    "fkFactura": 20,
+    "fkDetallesP": 20,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 30,
+  "fields": {
+    "fkFactura": 21,
+    "fkDetallesP": 21,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 31,
+  "fields": {
+    "fkFactura": 22,
+    "fkDetallesP": 22,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 32,
+  "fields": {
+    "fkFactura": 23,
+    "fkDetallesP": 26,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 33,
+  "fields": {
+    "fkFactura": 24,
+    "fkDetallesP": 27,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 34,
+  "fields": {
+    "fkFactura": 25,
+    "fkDetallesP": 13,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 35,
+  "fields": {
+    "fkFactura": 25,
+    "fkDetallesP": 14,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 36,
+  "fields": {
+    "fkFactura": 26,
+    "fkDetallesP": 15,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 37,
+  "fields": {
+    "fkFactura": 27,
+    "fkDetallesP": 16,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 38,
+  "fields": {
+    "fkFactura": 28,
+    "fkDetallesP": 17,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 39,
+  "fields": {
+    "fkFactura": 29,
+    "fkDetallesP": 18,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 40,
+  "fields": {
+    "fkFactura": 30,
+    "fkDetallesP": 19,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 41,
+  "fields": {
+    "fkFactura": 30,
+    "fkDetallesP": 20,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 42,
+  "fields": {
+    "fkFactura": 31,
+    "fkDetallesP": 23,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 43,
+  "fields": {
+    "fkFactura": 32,
+    "fkDetallesP": 24,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 44,
+  "fields": {
+    "fkFactura": 33,
+    "fkDetallesP": 25,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 45,
+  "fields": {
+    "fkFactura": 34,
+    "fkDetallesP": 28,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 46,
+  "fields": {
+    "fkFactura": 35,
+    "fkDetallesP": 13,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 47,
+  "fields": {
+    "fkFactura": 35,
+    "fkDetallesP": 14,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 48,
+  "fields": {
+    "fkFactura": 36,
+    "fkDetallesP": 15,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 49,
+  "fields": {
+    "fkFactura": 37,
+    "fkDetallesP": 16,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 50,
+  "fields": {
+    "fkFactura": 38,
+    "fkDetallesP": 17,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 51,
+  "fields": {
+    "fkFactura": 39,
+    "fkDetallesP": 18,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 52,
+  "fields": {
+    "fkFactura": 40,
+    "fkDetallesP": 19,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 53,
+  "fields": {
+    "fkFactura": 40,
+    "fkDetallesP": 20,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 54,
+  "fields": {
+    "fkFactura": 41,
+    "fkDetallesP": 23,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 55,
+  "fields": {
+    "fkFactura": 42,
+    "fkDetallesP": 24,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 56,
+  "fields": {
+    "fkFactura": 43,
+    "fkDetallesP": 25,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 57,
+  "fields": {
+    "fkFactura": 44,
+    "fkDetallesP": 28,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 58,
+  "fields": {
+    "fkFactura": 45,
+    "fkDetallesP": 13,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 59,
+  "fields": {
+    "fkFactura": 45,
+    "fkDetallesP": 14,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 60,
+  "fields": {
+    "fkFactura": 46,
+    "fkDetallesP": 15,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 61,
+  "fields": {
+    "fkFactura": 47,
+    "fkDetallesP": 16,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 62,
+  "fields": {
+    "fkFactura": 48,
+    "fkDetallesP": 17,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 63,
+  "fields": {
+    "fkFactura": 49,
+    "fkDetallesP": 18,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 64,
+  "fields": {
+    "fkFactura": 50,
+    "fkDetallesP": 19,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 65,
+  "fields": {
+    "fkFactura": 50,
+    "fkDetallesP": 20,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 66,
+  "fields": {
+    "fkFactura": 51,
+    "fkDetallesP": 23,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 67,
+  "fields": {
+    "fkFactura": 52,
+    "fkDetallesP": 24,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 68,
+  "fields": {
+    "fkFactura": 53,
+    "fkDetallesP": 25,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 69,
+  "fields": {
+    "fkFactura": 54,
+    "fkDetallesP": 28,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 70,
+  "fields": {
+    "fkFactura": 55,
+    "fkDetallesP": 13,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 71,
+  "fields": {
+    "fkFactura": 55,
+    "fkDetallesP": 14,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 72,
+  "fields": {
+    "fkFactura": 56,
+    "fkDetallesP": 15,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 73,
+  "fields": {
+    "fkFactura": 57,
+    "fkDetallesP": 16,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 74,
+  "fields": {
+    "fkFactura": 58,
+    "fkDetallesP": 17,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 75,
+  "fields": {
+    "fkFactura": 59,
+    "fkDetallesP": 18,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 76,
+  "fields": {
+    "fkFactura": 60,
+    "fkDetallesP": 19,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 77,
+  "fields": {
+    "fkFactura": 60,
+    "fkDetallesP": 20,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 78,
+  "fields": {
+    "fkFactura": 61,
+    "fkDetallesP": 23,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 79,
+  "fields": {
+    "fkFactura": 62,
+    "fkDetallesP": 24,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 80,
+  "fields": {
+    "fkFactura": 63,
+    "fkDetallesP": 25,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 81,
+  "fields": {
+    "fkFactura": 64,
+    "fkDetallesP": 28,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 82,
+  "fields": {
+    "fkFactura": 65,
+    "fkDetallesP": 13,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 83,
+  "fields": {
+    "fkFactura": 65,
+    "fkDetallesP": 14,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 84,
+  "fields": {
+    "fkFactura": 66,
+    "fkDetallesP": 15,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 85,
+  "fields": {
+    "fkFactura": 67,
+    "fkDetallesP": 16,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 86,
+  "fields": {
+    "fkFactura": 68,
+    "fkDetallesP": 17,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 87,
+  "fields": {
+    "fkFactura": 69,
+    "fkDetallesP": 18,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 88,
+  "fields": {
+    "fkFactura": 70,
+    "fkDetallesP": 19,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 89,
+  "fields": {
+    "fkFactura": 70,
+    "fkDetallesP": 20,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 90,
+  "fields": {
+    "fkFactura": 71,
+    "fkDetallesP": 23,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 91,
+  "fields": {
+    "fkFactura": 72,
+    "fkDetallesP": 24,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 92,
+  "fields": {
+    "fkFactura": 73,
+    "fkDetallesP": 25,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.detallesfactura",
+  "pk": 93,
+  "fields": {
+    "fkFactura": 74,
+    "fkDetallesP": 28,
+    "cantidad": 1,
+    "precio": 28000.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 1,
+  "fields": {
+    "fkFactura": 1,
+    "numeroAprobacion": "1234",
+    "fechaAprobacion": "2019-07-01",
+    "entidadAprobacion": "A",
+    "cuotas":5,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 2,
+  "fields": {
+    "fkFactura": 2,
+    "numeroAprobacion": "2345",
+    "fechaAprobacion": "2019-07-05",
+    "entidadAprobacion": "A",
+    "cuotas":5,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 3,
+  "fields": {
+    "fkFactura": 3,
+    "numeroAprobacion": "3456",
+    "fechaAprobacion": "2019-07-10",
+    "entidadAprobacion": "A",
+    "cuotas":10,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 4,
+  "fields": {
+    "fkFactura": 4,
+    "numeroAprobacion": "4567",
+    "fechaAprobacion": "2019-07-12",
+    "entidadAprobacion": "A",
+    "cuotas":10,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 5,
+  "fields": {
+    "fkFactura": 5,
+    "numeroAprobacion": "5678",
+    "fechaAprobacion": "2019-07-13",
+    "entidadAprobacion": "A",
+    "cuotas":10,
+    "porcentajePago": 60.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 6,
+  "fields": {
+    "fkFactura": 6,
+    "numeroAprobacion": "6789",
+    "fechaAprobacion": "2019-07-18",
+    "entidadAprobacion": "A",
+    "cuotas":25,
+    "porcentajePago": 60.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 7,
+  "fields": {
+    "fkFactura": 7,
+    "numeroAprobacion": "7890",
+    "fechaAprobacion": "2019-07-18",
+    "entidadAprobacion": "A",
+    "cuotas":25,
+    "porcentajePago": 10.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 8,
+  "fields": {
+    "fkFactura": 11,
+    "numeroAprobacion": "9012",
+    "fechaAprobacion": "2019-07-02",
+    "entidadAprobacion": "B",
+    "cuotas":25,
+    "porcentajePago": 20.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 9,
+  "fields": {
+    "fkFactura": 18,
+    "numeroAprobacion": "0123",
+    "fechaAprobacion": "2019-07-05",
+    "entidadAprobacion": "B",
+    "cuotas":25,
+    "porcentajePago": 40.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 10,
+  "fields": {
+    "fkFactura": 19,
+    "numeroAprobacion": "1324",
+    "fechaAprobacion": "2019-07-05",
+    "entidadAprobacion": "B",
+    "cuotas":25,
+    "porcentajePago": 40.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 11,
+  "fields": {
+    "fkFactura": 20,
+    "numeroAprobacion": "2436",
+    "fechaAprobacion": "2019-07-05",
+    "entidadAprobacion": "B",
+    "cuotas":25,
+    "porcentajePago": 40.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 12,
+  "fields": {
+    "fkFactura": 21,
+    "numeroAprobacion": "3546",
+    "fechaAprobacion": "2019-07-05",
+    "entidadAprobacion": "B",
+    "cuotas":25,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 13,
+  "fields": {
+    "fkFactura": 22,
+    "numeroAprobacion": "4657",
+    "fechaAprobacion": "2019-07-05",
+    "entidadAprobacion": "B",
+    "cuotas":25,
+    "porcentajePago": 40.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 14,
+  "fields": {
+    "fkFactura": 28,
+    "numeroAprobacion": "1029",
+    "fechaAprobacion": "2019-07-23",
+    "entidadAprobacion": "B",
+    "cuotas":30,
+    "porcentajePago": 40.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 15,
+  "fields": {
+    "fkFactura": 38,
+    "numeroAprobacion": "2938",
+    "fechaAprobacion": "2019-07-23",
+    "entidadAprobacion": "C",
+    "cuotas":30,
+    "porcentajePago": 40.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 16,
+  "fields": {
+    "fkFactura": 39,
+    "numeroAprobacion": "3847",
+    "fechaAprobacion": "2019-07-23",
+    "entidadAprobacion": "C",
+    "cuotas":30,
+    "porcentajePago": 20.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 17,
+  "fields": {
+    "fkFactura": 40,
+    "numeroAprobacion": "4756",
+    "fechaAprobacion": "2019-07-26",
+    "entidadAprobacion": "C",
+    "cuotas":30,
+    "porcentajePago": 20.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 18,
+  "fields": {
+    "fkFactura": 65,
+    "numeroAprobacion": "0897",
+    "fechaAprobacion": "2019-05-19",
+    "entidadAprobacion": "C",
+    "cuotas":30,
+    "porcentajePago": 20.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 19,
+  "fields": {
+    "fkFactura": 66,
+    "numeroAprobacion": "0897",
+    "fechaAprobacion": "2019-05-19",
+    "entidadAprobacion": "C",
+    "cuotas":30,
+    "porcentajePago": 45.0
+  }
+},
+{
+  "model": "ventas.pagoscredito",
+  "pk": 20,
+  "fields": {
+    "fkFactura": 67,
+    "numeroAprobacion": "0897",
+    "fechaAprobacion": "2019-05-19",
+    "entidadAprobacion": "C",
+    "cuotas":28,
+    "porcentajePago": 45.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 1,
+  "fields": {
+    "numeroTarjetaDebito": 1234,
+    "fkFactura": 5,
+    "ahorros": true,
+    "porcentajePago": 40.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 2,
+  "fields": {
+    "numeroTarjetaDebito": 1234,
+    "fkFactura": 6,
+    "ahorros": true,
+    "porcentajePago": 40.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 3,
+  "fields": {
+    "numeroTarjetaDebito": 1234,
+    "fkFactura": 7,
+    "ahorros": true,
+    "porcentajePago": 90.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 4,
+  "fields": {
+    "numeroTarjetaDebito": 1234,
+    "fkFactura": 8,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 5,
+  "fields": {
+    "numeroTarjetaDebito": 1234,
+    "fkFactura": 9,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 6,
+  "fields": {
+    "numeroTarjetaDebito": 1234,
+    "fkFactura": 10,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 7,
+  "fields": {
+    "numeroTarjetaDebito": 2345,
+    "fkFactura": 11,
+    "ahorros": true,
+    "porcentajePago": 80.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 8,
+  "fields": {
+    "numeroTarjetaDebito": 2345,
+    "fkFactura": 12,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 9,
+  "fields": {
+    "numeroTarjetaDebito": 2345,
+    "fkFactura": 13,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 10,
+  "fields": {
+    "numeroTarjetaDebito": 2345,
+    "fkFactura": 14,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 11,
+  "fields": {
+    "numeroTarjetaDebito": 3456,
+    "fkFactura": 15,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 12,
+  "fields": {
+    "numeroTarjetaDebito": 3456,
+    "fkFactura": 16,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 13,
+  "fields": {
+    "numeroTarjetaDebito": 3456,
+    "fkFactura": 17,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 14,
+  "fields": {
+    "numeroTarjetaDebito": 3456,
+    "fkFactura": 18,
+    "ahorros": true,
+    "porcentajePago": 60.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 15,
+  "fields": {
+    "numeroTarjetaDebito": 3456,
+    "fkFactura": 19,
+    "ahorros": true,
+    "porcentajePago": 60.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 16,
+  "fields": {
+    "numeroTarjetaDebito": 3456,
+    "fkFactura": 20,
+    "ahorros": true,
+    "porcentajePago": 60.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 17,
+  "fields": {
+    "numeroTarjetaDebito": 3456,
+    "fkFactura": 22,
+    "ahorros": true,
+    "porcentajePago": 60.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 18,
+  "fields": {
+    "numeroTarjetaDebito": 3456,
+    "fkFactura": 23,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 19,
+  "fields": {
+    "numeroTarjetaDebito": 3456,
+    "fkFactura": 24,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 20,
+  "fields": {
+    "numeroTarjetaDebito": 4567,
+    "fkFactura": 25,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 21,
+  "fields": {
+    "numeroTarjetaDebito": 4567,
+    "fkFactura": 26,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 22,
+  "fields": {
+    "numeroTarjetaDebito": 4567,
+    "fkFactura": 27,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 23,
+  "fields": {
+    "numeroTarjetaDebito": 4567,
+    "fkFactura": 28,
+    "ahorros": true,
+    "porcentajePago": 60.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 24,
+  "fields": {
+    "numeroTarjetaDebito": 4567,
+    "fkFactura": 29,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 25,
+  "fields": {
+    "numeroTarjetaDebito": 4567,
+    "fkFactura": 30,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 26,
+  "fields": {
+    "numeroTarjetaDebito": 4567,
+    "fkFactura": 31,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 27,
+  "fields": {
+    "numeroTarjetaDebito": 4567,
+    "fkFactura": 32,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 28,
+  "fields": {
+    "numeroTarjetaDebito": 4567,
+    "fkFactura": 33,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 29,
+  "fields": {
+    "numeroTarjetaDebito": 4567,
+    "fkFactura": 34,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 30,
+  "fields": {
+    "numeroTarjetaDebito": 5678,
+    "fkFactura": 35,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 31,
+  "fields": {
+    "numeroTarjetaDebito": 5678,
+    "fkFactura": 36,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 32,
+  "fields": {
+    "numeroTarjetaDebito": 5678,
+    "fkFactura": 37,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 33,
+  "fields": {
+    "numeroTarjetaDebito": 5678,
+    "fkFactura": 38,
+    "ahorros": true,
+    "porcentajePago": 60.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 34,
+  "fields": {
+    "numeroTarjetaDebito": 5678,
+    "fkFactura": 39,
+    "ahorros": true,
+    "porcentajePago": 80.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 35,
+  "fields": {
+    "numeroTarjetaDebito": 5678,
+    "fkFactura": 40,
+    "ahorros": true,
+    "porcentajePago": 80.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 36,
+  "fields": {
+    "numeroTarjetaDebito": 5678,
+    "fkFactura": 41,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 37,
+  "fields": {
+    "numeroTarjetaDebito": 5678,
+    "fkFactura": 42,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 38,
+  "fields": {
+    "numeroTarjetaDebito": 5678,
+    "fkFactura": 43,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 39,
+  "fields": {
+    "numeroTarjetaDebito": 5678,
+    "fkFactura": 44,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 40,
+  "fields": {
+    "numeroTarjetaDebito": 6789,
+    "fkFactura": 45,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 41,
+  "fields": {
+    "numeroTarjetaDebito": 6789,
+    "fkFactura": 46,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 42,
+  "fields": {
+    "numeroTarjetaDebito": 6789,
+    "fkFactura": 47,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 43,
+  "fields": {
+    "numeroTarjetaDebito": 6789,
+    "fkFactura": 48,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 44,
+  "fields": {
+    "numeroTarjetaDebito": 6789,
+    "fkFactura": 49,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 45,
+  "fields": {
+    "numeroTarjetaDebito": 6789,
+    "fkFactura": 50,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 46,
+  "fields": {
+    "numeroTarjetaDebito": 6789,
+    "fkFactura": 51,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 47,
+  "fields": {
+    "numeroTarjetaDebito": 6789,
+    "fkFactura": 52,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 48,
+  "fields": {
+    "numeroTarjetaDebito": 6789,
+    "fkFactura": 53,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 49,
+  "fields": {
+    "numeroTarjetaDebito": 6789,
+    "fkFactura": 54,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 50,
+  "fields": {
+    "numeroTarjetaDebito": 7890,
+    "fkFactura": 55,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 51,
+  "fields": {
+    "numeroTarjetaDebito": 7890,
+    "fkFactura": 56,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 52,
+  "fields": {
+    "numeroTarjetaDebito": 7890,
+    "fkFactura": 57,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 53,
+  "fields": {
+    "numeroTarjetaDebito": 7890,
+    "fkFactura": 58,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 54,
+  "fields": {
+    "numeroTarjetaDebito": 7890,
+    "fkFactura": 59,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 55,
+  "fields": {
+    "numeroTarjetaDebito": 7890,
+    "fkFactura": 60,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 56,
+  "fields": {
+    "numeroTarjetaDebito": 7890,
+    "fkFactura": 61,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 57,
+  "fields": {
+    "numeroTarjetaDebito": 7890,
+    "fkFactura": 62,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 58,
+  "fields": {
+    "numeroTarjetaDebito": 7890,
+    "fkFactura": 63,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 59,
+  "fields": {
+    "numeroTarjetaDebito": 7890,
+    "fkFactura": 64,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 60,
+  "fields": {
+    "numeroTarjetaDebito": 1324,
+    "fkFactura": 65,
+    "ahorros": true,
+    "porcentajePago": 80.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 61,
+  "fields": {
+    "numeroTarjetaDebito": 1324,
+    "fkFactura": 66,
+    "ahorros": true,
+    "porcentajePago": 55.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 62,
+  "fields": {
+    "numeroTarjetaDebito": 1324,
+    "fkFactura": 67,
+    "ahorros": true,
+    "porcentajePago": 55.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 63,
+  "fields": {
+    "numeroTarjetaDebito": 1324,
+    "fkFactura": 68,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 64,
+  "fields": {
+    "numeroTarjetaDebito": 1324,
+    "fkFactura": 69,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 65,
+  "fields": {
+    "numeroTarjetaDebito": 1324,
+    "fkFactura": 70,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 66,
+  "fields": {
+    "numeroTarjetaDebito": 1324,
+    "fkFactura": 71,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 67,
+  "fields": {
+    "numeroTarjetaDebito": 1324,
+    "fkFactura": 72,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 68,
+  "fields": {
+    "numeroTarjetaDebito": 1324,
+    "fkFactura": 73,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+},
+{
+  "model": "ventas.pagosdebito",
+  "pk": 69,
+  "fields": {
+    "numeroTarjetaDebito": 1324,
+    "fkFactura": 74,
+    "ahorros": true,
+    "porcentajePago": 100.0
+  }
+}
+]

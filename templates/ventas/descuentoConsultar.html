@@ -1,0 +1,136 @@
+{% extends 'baseAdmin.html' %}
+
+{% block content %}
+
+<div class="col-md-8 col-md-offset-2">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Consultar Descuentos </h1>
+      </center>
+    </div>
+  </div>
+  
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        
+        <form method="post" id="form" name="consultarDescuentos">
+          {% csrf_token %}
+          <input type="radio" name="tipoConsulta" value="categoria" > Consultar por Categoría<br>
+          <input type="radio" name="tipoConsulta" value="subcategoria"> Consultar por Subcategoría<br>
+          <input type="radio" name="tipoConsulta" value="producto"> Consultar por Productos<br>
+          <br>
+          <div class="form-group">
+            <center>
+              <button type="submit" class="btn btn-primary mb-2" name="consultarBoton" value="consultarBoton">Consultar</button>
+            </center>
+            <br>
+          
+          </div>
+        </form>
+          {% if categoria %}
+          <div class="panel-login panel">
+            <div class="panel-heading">
+              <center>
+                <h1> Tabla de Consulta por Categorias </h1>
+              </center>
+            </div>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"><center>Categoría</center></th>
+                <th scope="col"><center>Descuento (%)</center></th>
+                <th scope="col"><center>Fecha de Inicio</center></th>
+                <th scope="col"><center>Fecha de Fin</center></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for c in categoria %}
+                <tr>
+                  <td><center>{{c.fkCategoria.nombreCategoria}}</center></td>
+                  <td><center>{{c.porcentajeDescuento}}</center></td>
+                  <td><center>{{c.fechaInicio}}</center></td>
+                  <td><center>{{c.fechaFin}}</center></td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          {% endif %}
+
+          {% if subcategoria %}
+          <div class="panel-login panel">
+            <div class="panel-heading">
+              <center>
+                <h1> Tabla de Consulta por Subcategorias </h1>
+              </center>
+            </div>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"><center>Categoría</center></th>
+                <th scope="col"><center>Subcategoría</center></th>
+                <th scope="col"><center>Descuento (%)</center></th>
+                <th scope="col"><center>Fecha de Inicio</center></th>
+                <th scope="col"><center>Fecha de Fin</center></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for s in subcategoria %}
+                <tr>
+                  <td><center>{{s.fkSubCategoria.fkCategoria.nombreCategoria}}</center></td>
+                  <td><center>{{s.fkSubCategoria.nombreSubCategoria}}</center></td>
+                  <td><center>{{s.porcentajeDescuento}}</center></td>
+                  <td><center>{{s.fechaInicio}}</center></td>
+                  <td><center>{{s.fechaFin}}</center></td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          {% endif %}
+
+          {% if producto %}
+          <div class="panel-login panel">
+            <div class="panel-heading">
+              <center>
+                <h1> Tabla de Consulta por Productos </h1>
+              </center>
+            </div>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"><center>Categoría</center></th>
+                <th scope="col"><center>Subcategoría</center></th>
+                <th scope="col"><center>Producto</center></th>
+                <th scope="col"><center>Descuento (%)</center></th>
+                <th scope="col"><center>Fecha de Inicio</center></th>
+                <th scope="col"><center>Fecha de Fin</center></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for p in producto %}
+                <tr>
+                  <td><center>{{p.fkProducto.fkSubCategoria.fkCategoria.nombreCategoria}}</center></td>
+                  <td><center>{{p.fkProducto.fkSubCategoria.nombreSubCategoria}}</center></td>
+                  <td><center>{{p.fkProducto.nombre}}</center></td>
+                  <td><center>{{p.porcentajeDescuento}}</center></td>
+                  <td><center>{{p.fechaInicio}}</center></td>
+                  <td><center>{{p.fechaFin}}</center></td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          {% endif %}
+
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+{% endblock %}

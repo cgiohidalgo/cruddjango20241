@@ -1,0 +1,88 @@
+{% extends 'baseAdmin.html' %}
+
+
+{% block head %}
+
+{% load static %}
+
+<script src="{% static 'graficos/plotly.js' %}"></script>
+
+<script src="{% static 'css/registroCliente/jquery-3.3.1.slim.min.js' %}"></script>
+
+<link rel="stylesheet" href="{% static 'css/registroCliente/datepicker.min.css' %}" />
+<script src="{% static 'css/registroCliente/datepicker.min.js' %}"></script>
+
+{% endblock %}
+
+{% block content %}
+  <div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Reporte de ventas </h1>
+      </center>
+    </div>
+  </div>
+      <form id="login-form" name='crearDescuento' method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="fecha_inicio">Fecha de inicio</label>
+          <input id="fecha_inicio" name='fecha_inicio' class="form-control" autocomplete="off">
+          <script>
+            $(function () {
+              $("#fecha_inicio").datepicker({format:'yyyy-mm-dd'},);
+            });
+          </script>
+          <label for="fecha_fin">Fecha de fin</label>
+          <input id="fecha_fin" name='fecha_fin' class="form-control" autocomplete="off">
+          <script>
+            $(function () {
+              $("#fecha_fin").datepicker({format:'yyyy-mm-dd'},);
+            });
+          </script>
+
+          <div class="form-group">
+            <label for="tipoReporte">Ingrese el tipo de reporte</label>
+              <select class="form-control" id="tipoReporte" name="tipoReporte">
+                  <option value=1>Dia</option>
+                  <option value=2>Mes</option>
+                  <option value=3>Año</option>
+              </select>
+          </div>
+
+        <br>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <input type="submit" name="generar-submit" id="generar-submit" tabindex="4" class="form-control btn btn-register" value="Generar Reporte">
+            </div>
+          </div>
+        </div>
+      </form>
+  </div>
+
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h3>Reporte de desde {{fechaInicio}} hasta {{fechaFin}}</h3>
+        <div id="tester" style="width:600px;height:250px;"></div>
+      </center>
+    </div>
+
+  <script>
+          TESTER = document.getElementById('tester');
+          Plotly.plot( TESTER, [
+            {
+              x:{{datax|safe}},
+              y:{{datay}},
+              type: 'bar'
+            }
+          ], 
+            {
+            margin: { t: 0 } 
+            } 
+          );
+        </script>
+  
+{% endblock %}

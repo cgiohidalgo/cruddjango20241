@@ -1,0 +1,99 @@
+{% extends 'baseAdmin.html' %}
+
+
+
+{% block content %}
+
+<div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Consultar Referencias </h1>
+      </center>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        <form id="formulario-producto" action="#" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="categoria">Categoria</label>
+            <select class="form-control" id="categoria" name="categoria" value="{{categoria}}" onChange="form.submit();">
+                <option value="-1" name="-1">Categoria</option>
+              {% for cat in categorias %}
+                {% if idcategoria == cat.pkCategoria   %}
+                  <option selected value={{cat.pkCategoria}} name={{cat.nombreCategoria}}>{{cat.nombreCategoria}}</option>
+                {% else %}
+                  <option value={{cat.pkCategoria}} name={{cat.nombreCategoria}}>{{cat.nombreCategoria}}</option>
+                {% endif %}
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="subCategoria">SubCategoria</label>                 
+            <select class="form-control" id="subcategoria" name="subcategoria" onChange="form.submit();">
+              <option value="-1" name="-1">subCategoria</option>
+              {% for subcat in subcategorias %}
+                {% if idsubcategoria == subcat.pkSubCategoria %}
+                  <option selected value={{subcat.pkSubCategoria}} name={{cat.nombreSubCategoria}}>{{subcat.nombreSubCategoria}}</option>
+                {% else %}
+                  <option value={{subcat.pkSubCategoria}} name={{subcat.nombreSubCategoria}}>{{subcat.nombreSubCategoria}}</option>
+                {% endif %}
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="producto">Referencia</label>                 
+            <select class="form-control" id="producto" name="producto" onChange="form.submit();">
+              <option value="-1" name="-1">Referencia</option>
+              {% for produc in productos %}
+                {% if idproducto == produc.pkProducto %}
+                  <option selected value={{produc.pkProducto}} name={{produc.nombre}}>{{produc.nombre}}</option>
+                {% else %}
+                  <option value={{produc.pkProducto}} name={{produc.nombre}}>{{produc.nombre}}</option>
+                {% endif %}
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="form-group">
+              <label for="inputNombre">Nombre</label>
+              <input readonly id="inputNombre" name="inputNombre" type="text" class="form-control" value="{{nombreO}}">
+              <div hidden>
+                <input id="inputId" name="inputId" type="text" class="form-control" value="{{idO}}" hidden>
+              </div>              
+          </div>
+                  
+          <div class="form-group">
+            <label for="DescrProducto">Descripción del producto</label>
+            <textarea readonly class="form-control" id="DescrProducto" name="DescrProducto" rows="3" >{{descripcionO}}</textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="inputIva">Iva (%)</label>
+            <input readonly id="inputIva" name="inputIva" type="number" class="form-control" value="{{ivaO}}">          
+          </div>
+
+          <div class="form-group">
+            <label for="inputPrecio">Precio</label>
+            <input readonly id="inputPrecio" name="inputPrecio" type="text" class="form-control" value="{{precioO}}">
+          </div>
+          
+          <div class="form-group">
+            <div class="custom-file">
+              <label for="buscadorImagen">Imagen</label>
+              <img name="actualImg" id="actualImg" src="{{rutaImagenO}}">
+            </div>
+          </div>                  
+        </form>
+      </div>
+    </div>    
+  </div>
+</div>
+
+{% endblock %}

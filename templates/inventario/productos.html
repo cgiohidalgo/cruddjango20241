@@ -1,0 +1,31 @@
+{% extends 'baseAdmin.html' %}
+
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/section.css' %}">
+
+<div class="col-md-6 col-md-offset-3">
+    <!-- class="col-md-6 col-md-offset-3" -->
+    <br>
+    <div class="panel-login panel">
+      <div class="panel-heading">
+        <center>
+          <h2> Gestión de Productos </h2>
+        </center>
+      </div>
+    </div>
+  
+    <div class="ps-section--offer">
+      <div class="ps-column" style="padding: 5px"><a class="ps-offer" href="{% url 'inventario:productosCrearPrincipal' %}"><img src="{% static 'images/menu_CRUD/agregar.png' %}" alt=""></a></div>
+      <div class="ps-column" style="padding: 5px"><a class="ps-offer" href="{% url 'inventario:productosConsultarPrincipal' %}"><img src="{% static 'images/menu_CRUD/consultar.png' %}" alt=""></a></div>
+    </div>
+    <div class="ps-section--offer">
+      <div class="ps-column" style="padding: 5px"><a class="ps-offer" href="{% url 'inventario:productosModificarPrincipal' %}"><img src="{% static 'images/menu_CRUD/modificar.png' %}" alt=""></a></div>
+      <div class="ps-column" style="padding: 5px"><a class="ps-offer" href="{% url 'inventario:productosEliminarPrincipal' %}"><img src="{% static 'images/menu_CRUD/eliminar.png' %}" alt=""></a></div>
+    </div>
+    <br>
+</div> 
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% load static %}
+
+<link href="{% static 'css/navbar.css' %}"  rel="stylesheet">
+
+<ul>
+  <li>
+    <a href="/usuarios/duenioAdminIngreso" style="padding: 1px; background-color: white;">
+      <img style="padding: 7px; height:45px; width: 120px" src="{% static 'images/nova.jpg' %}"/>
+    </a>
+  </li>
+  <li><a href="{% url 'usuarios:duenioClienteMenu' %}">Clientes</a></li>
+  <li><a href="{% url 'inventario:productos' %}">Productos</a></li>
+  <li><a href="{% url 'ventas:descuentoCrud' %}">Descuentos</a></li>
+  <li><a href="{% url 'inventario:proveedor' %}">Proveedores</a></li>
+  <li><a href="{% url 'inventario:categoria' %}">Categorias</a></li>
+  <li><a href="{% url 'inventario:bodegainicio' %}">Bodegas</a></li>
+  <li><a href="{% url 'reportes:inicioReportes' %}">Reportes</a></li>
+  
+  <li style="float:right"><a class="active" href="#LogOut">Cerrar Sesion</a></li>
+</ul>

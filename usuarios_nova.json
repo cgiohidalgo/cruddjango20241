@@ -1,0 +1,125 @@
+[
+{
+  "model": "usuarios.cliente",
+  "pk": "Camila",
+  "fields": {
+    "clave": "81dc9bdb52d04dc20036dbd8313ed055",
+    "fechaNacimiento": "2002-04-12",
+    "direccion": "15539 Forster Trail",
+    "telefono": "5003821077",
+    "tipoDocumento": "CC",
+    "numeroDocumento": 307540
+  }
+},
+{
+  "model": "usuarios.cliente",
+  "pk": "Felipe",
+  "fields": {
+    "clave": "81dc9bdb52d04dc20036dbd8313ed055",
+    "fechaNacimiento": "1999-07-12",
+    "direccion": "15539 Forster Trail",
+    "telefono": "5003821077",
+    "tipoDocumento": "CC",
+    "numeroDocumento": 307540
+  }
+},
+{
+  "model": "usuarios.cliente",
+  "pk": "Jaime",
+  "fields": {
+    "clave": "81dc9bdb52d04dc20036dbd8313ed055",
+    "fechaNacimiento": "1998-12-28",
+    "direccion": "15539 Forster Trail",
+    "telefono": "5003821077",
+    "tipoDocumento": "CC",
+    "numeroDocumento": 307540
+  }
+},
+{
+  "model": "usuarios.cliente",
+  "pk": "Laura",
+  "fields": {
+    "clave": "81dc9bdb52d04dc20036dbd8313ed055",
+    "fechaNacimiento": "1991-08-05",
+    "direccion": "15539 Forster Trail",
+    "telefono": "5003821077",
+    "tipoDocumento": "CC",
+    "numeroDocumento": 307540
+  }
+},
+{
+  "model": "usuarios.cliente",
+  "pk": "Marcela",
+  "fields": {
+    "clave": "81dc9bdb52d04dc20036dbd8313ed055",
+    "fechaNacimiento": "1995-06-03",
+    "direccion": "15539 Forster Trail",
+    "telefono": "5003821077",
+    "tipoDocumento": "CC",
+    "numeroDocumento": 307540
+  }
+},
+{
+  "model": "usuarios.cliente",
+  "pk": "Maria Jose",
+  "fields": {
+    "clave": "81dc9bdb52d04dc20036dbd8313ed055",
+    "fechaNacimiento": "2001-05-25",
+    "direccion": "15539 Forster Trail",
+    "telefono": "5003821077",
+    "tipoDocumento": "CC",
+    "numeroDocumento": 307540
+  }
+},
+{
+  "model": "usuarios.cliente",
+  "pk": "Natalia",
+  "fields": {
+    "clave": "81dc9bdb52d04dc20036dbd8313ed055",
+    "fechaNacimiento": "2001-07-23",
+    "direccion": "15539 Forster Trail",
+    "telefono": "5003821077",
+    "tipoDocumento": "CC",
+    "numeroDocumento": 307540
+  }
+},
+{
+  "model": "usuarios.cliente",
+  "pk": "Sara",
+  "fields": {
+    "clave": "81dc9bdb52d04dc20036dbd8313ed055",
+    "fechaNacimiento": "2001-01-04",
+    "direccion": "15539 Forster Trail",
+    "telefono": "5003821077",
+    "tipoDocumento": "CC",
+    "numeroDocumento": 307540
+  }
+},
+{
+  "model": "usuarios.administradorduenio",
+  "pk": 1,
+  "fields": {
+    "nombreUsuario": "Marthox",
+    "clave": "81dc9bdb52d04dc20036dbd8313ed055",
+    "tipo": "CEO"
+  }
+},
+{
+  "model": "usuarios.administradorduenio",
+  "pk": 2,
+  "fields": {
+    "nombreUsuario": "Valeria",
+    "clave": "81dc9bdb52d04dc20036dbd8313ed055",
+    "tipo": "ADMIN"
+  }
+},
+{
+  "model": "usuarios.administradorduenio",
+  "pk": 3,
+  "fields": {
+    "nombreUsuario": "Emily",
+    "clave": "81dc9bdb52d04dc20036dbd8313ed055",
+    "tipo": "ADMIN"
+  }
+}
+]

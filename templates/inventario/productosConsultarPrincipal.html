@@ -1,0 +1,25 @@
+{% extends 'baseAdmin.html' %}
+
+
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/section.css' %}">
+
+<div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h2> Consultar Productos </h2>
+      </center>
+    </div>
+  </div>
+
+  <div class="ps-section--offer">
+    <div class="ps-column" style="padding: 5px"><a class="ps-offer" href="{% url 'inventario:referenciasConsultar' %}"><img src="{% static 'images/menu_Botones/referencias.png' %}" alt=""></a></div>    
+    <div class="ps-column" style="padding: 5px"><a class="ps-offer" href="{% url 'inventario:productosConsultar' %}"><img src="{% static 'images/menu_Botones/productos.png' %}" alt=""></a></div>
+  </div>
+</div>
+
+{% endblock %}

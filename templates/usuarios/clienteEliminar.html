@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% load static %}
+
+{% endblock %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/section.css' %}">
+<div style="padding: 10px" class="row">
+    <div class="column">
+        <div id="column-left" class="col-sm-4 col-lg-3 ">
+            <br>
+            <div id="category-menu" class="navbar collapse in mb_40" aria-expanded="true" role="button">
+            <div class="nav-responsive">
+                <div class="heading-part">
+                <h2 class="main_title" >OPCIONES</h2>
+                </div>
+                    <ul class="nav  main-navigation collapse in">
+                        <li><a href="{% url 'usuarios:clientePerfil' nombre %}" style="padding: 2px; background-color: white;">Informacion Personal {{cliente.nombre}}</a></li>
+                    </ul>
+                    <ul class="nav  main-navigation collapse in">
+                        <li><a href="" style="padding: 2px; background-color: white;">Mis Compras</a></li>
+                    </ul> 
+                    <ul class="nav  main-navigation collapse in">
+                        <li><a href="" style="padding: 2px; background-color: white;">Solicitar Eliminacion</a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="col-md-6 col-md-offset-1">
+            <div  style="padding: 5px">
+                <div class="panel-login panel">
+                    <div class="panel-heading">
+                        <center>
+                        <h2> Eliminar Cuenta </h2>
+                        </center>
+                    </div>
+                </div>
+                <div class="panel-body" style="background-color:#FEF0F0;">
+                    
+                    <div class="col-lg-12">
+                        <center>
+                            <h3>¿Está seguro que desea eliminar su cuenta?</h3>
+                        </center>
+                        <br>
+                            <p>Si confirma esta acción se borrarán todos los registros asociados a su cuenta.</p>
+                            <p>Tenga en cuenta que esta acción no podrá ser revertida.</p>
+                        <br>
+                        <center>
+                        <form id="form" name='eliminarCliente' id='eliminarCliente' method="post" >
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-primary mb-2" name="confirmar" value="si">Si</button>
+                            <button type="submit" class="btn btn-primary mb-2" name="confirmar" value="no">No</button>
+                        </form>
+                        </center>
+                        
+                    </div>
+                </div>
+            </div>               
+        </div>
+    </div>
+</div>
+
+{% endblock %}

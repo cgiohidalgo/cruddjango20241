@@ -1,0 +1,93 @@
+{% extends 'baseAdmin.html' %}
+
+
+
+{% block content %}
+
+<div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Crear Referencias </h1>
+      </center>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        <form id="formulario-producto"  enctype="multipart/form-data" method="post">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="categoria">Categoria</label>
+            <select class="form-control" id="categoria" name="categoria" onChange="form.submit();">
+              <option value="-1"  name='vacio'>Categoria</option>
+              {% for categoria in categorias %}
+                {% if idCategoria == categoria.pkCategoria   %}
+                  <option selected value={{categoria.pkCategoria}} name={{categoria.nombreCategoria}}>{{categoria.nombreCategoria}}</option>
+                {% else %}
+                  <option value={{categoria.pkCategoria}} name={{categoria.nombreCategoria}}>{{categoria.nombreCategoria}}</option>
+                {% endif %}
+              {% endfor %}
+            </select>
+            <div class="hidden">
+              <input type="text" name="idCat" id="idCat" value="{{idCategoria}}"></input>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subCategoria">SubCategoria</label>                 
+            <select class="form-control" id="subCategoria" name="subCategoria">
+              <option value="null">subCategoria</option>
+              {% for subCategoria in subCategorias %}
+                <option value={{subCategoria.pkSubCategoria}}>{{subCategoria.nombreSubCategoria}}</option>
+                {% empty %}
+                {% endfor %}
+            </select>
+          </div>
+
+          <div class="form-group">
+              <label for="inputNombre">Nombre</label>
+              <input required id="inputNombre" name="inputNombre" type="text" class="form-control">
+          </div>
+                  
+          <div class="form-group">
+            <label for="DescrProducto">Descripción del producto</label>
+            <textarea required class="form-control" id="DescrProducto" name="DescrProducto" rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="inputIva">Iva (%)</label>
+            <input required id="inputIva" name="inputIva" type="number" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="inputPrecio">Precio</label>
+            <input required id="inputPrecio" name="inputPrecio" type="number" class="form-control">
+          </div>
+          
+          <div class="form-group">
+            <div class="custom-file">
+              <label for="buscadorImagen">Imagen</label>
+              <div>
+                <input required type="file" class="custom-file-input" id="buscadorImagen" name="buscadorImagen" lang="es-ES" accept="image/*">
+                <label class="custom-file-label"  for="buscadorImagen">Seleccionar Archivo</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                <input type="submit" name="productos-submit" id="productos-submit" tabindex="4" class="form-control btn" value="Crear Referencia">
+              </div>
+            </div>
+          </div>                  
+        </form>
+      </div>
+    </div>    
+  </div>
+</div>
+
+{% endblock %}

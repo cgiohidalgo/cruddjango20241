@@ -1,0 +1,59 @@
+{% extends 'baseAdmin.html' %}
+{% block content %}
+
+{% load static %}
+
+
+<div class="col-md-8 col-md-offset-2">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Pocas Unidades </h1>
+      </center>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        {% if productos %}
+        <div>
+          <form method='post' id='eliminar' name='eliminar' class='login-form'>
+            {% csrf_token %}
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col"><center>Productos</center></th>
+                  <th scope="col"><center>Talla</center></th>
+                  <th scope="col"><center>Color</center></th>
+                  <th scope="col"><center>Cantidad</center></th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for producto in productos %}
+                  <tr>
+                    <td><center>{{producto.fkProducto__nombre}}</center></td>
+                    <td><center>{{producto.talla}}</center></td>
+                    <td><center>{{producto.color}}</center></td>
+                    <td><center>{{producto.total}}</center></td>
+                  </tr>
+                  {% empty %}
+                  <p>No hay productos</p>
+                {% endfor %}
+              </tbody>
+            </table>
+          </form>
+        </div>
+        {% else %}
+          <p>
+            <div class="alert alert-info" role="alert">
+              No hay productos con pocas unidades
+              </div>
+          </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

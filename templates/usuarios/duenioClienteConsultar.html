@@ -1,0 +1,59 @@
+{% extends 'baseAdmin.html' %}
+{% block content %}
+	
+<div class="col-md-8 col-md-offset-2">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Consultar Clientes </h1>
+      </center>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+                        
+        <form method="post" id="form" name="consultarCliente">
+          {% csrf_token %} 
+          <div class="form-group">
+            <label for ="buscador">Buscar (debe digitar la busqueda y presionar enter)</label>
+            <input type="text" name="buscador" id="buscador" class="form-control" placeholder="Buscar" onchange="form.submit();">
+          </div>
+        </form>
+        <div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Tipo documento</th>
+                <th scope="col">Documento</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for cliente in clientes %}
+                <tr>
+                  <td>{{cliente.nombre}}</td>
+                  <td>{{cliente.direccion}}</td>
+                  <td>{{cliente.telefono}}</td>
+                  <td>{{cliente.tipoDocumento}}</td>
+                  <td>{{cliente.numeroDocumento}}</td>
+                </tr>
+                {% empty %}
+                <p>No hay clientes registrados o la busqueda no arrojó resultados</p>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+                        
+                        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

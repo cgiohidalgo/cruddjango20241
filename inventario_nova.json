@@ -1,0 +1,2106 @@
+[
+{
+  "model": "inventario.categoria",
+  "pk": 1,
+  "fields": {
+    "nombreCategoria": "Hombres",
+    "rutaImagen": "../media/categoriasImagenes/categorias.jpg"
+  }
+},
+{
+  "model": "inventario.categoria",
+  "pk": 2,
+  "fields": {
+    "nombreCategoria": "Mujeres",
+    "rutaImagen": "../media/categoriasImagenes/categorias.jpg"
+  }
+},
+{
+  "model": "inventario.categoria",
+  "pk": 3,
+  "fields": {
+    "nombreCategoria": "Ni\u00f1os",
+    "rutaImagen": "../media/categoriasImagenes/categorias.jpg"
+  }
+},
+{
+  "model": "inventario.categoria",
+  "pk": 4,
+  "fields": {
+    "nombreCategoria": "Accesorios",
+    "rutaImagen": "../media/categoriasImagenes/categorias.jpg"
+  }
+},
+{
+  "model": "inventario.categoria",
+  "pk": 5,
+  "fields": {
+    "nombreCategoria": "Zapatos",
+    "rutaImagen": "../media/categoriasImagenes/categorias.jpg"
+  }
+},
+{
+  "model": "inventario.subcategoria",
+  "pk": 1,
+  "fields": {
+    "fkCategoria": 1,
+    "nombreSubCategoria": "CamisetasH"
+  }
+},
+{
+  "model": "inventario.subcategoria",
+  "pk": 2,
+  "fields": {
+    "fkCategoria": 1,
+    "nombreSubCategoria": "CamisasH"
+  }
+},
+{
+  "model": "inventario.subcategoria",
+  "pk": 3,
+  "fields": {
+    "fkCategoria": 1,
+    "nombreSubCategoria": "PantalonesH"
+  }
+},
+{
+  "model": "inventario.subcategoria",
+  "pk": 4,
+  "fields": {
+    "fkCategoria": 2,
+    "nombreSubCategoria": "CamisetasM"
+  }
+},
+{
+  "model": "inventario.subcategoria",
+  "pk": 5,
+  "fields": {
+    "fkCategoria": 2,
+    "nombreSubCategoria": "FaldasM"
+  }
+},
+{
+  "model": "inventario.subcategoria",
+  "pk": 6,
+  "fields": {
+    "fkCategoria": 2,
+    "nombreSubCategoria": "VestidosM"
+  }
+},
+{
+  "model": "inventario.subcategoria",
+  "pk": 7,
+  "fields": {
+    "fkCategoria": 3,
+    "nombreSubCategoria": "Pijamas"
+  }
+},
+{
+  "model": "inventario.subcategoria",
+  "pk": 8,
+  "fields": {
+    "fkCategoria": 3,
+    "nombreSubCategoria": "VestidosNi\u00f1a"
+  }
+},
+{
+  "model": "inventario.subcategoria",
+  "pk": 9,
+  "fields": {
+    "fkCategoria": 3,
+    "nombreSubCategoria": "Chaquetas"
+  }
+},
+{
+  "model": "inventario.subcategoria",
+  "pk": 10,
+  "fields": {
+    "fkCategoria": 4,
+    "nombreSubCategoria": "Bolsos"
+  }
+},
+{
+  "model": "inventario.subcategoria",
+  "pk": 11,
+  "fields": {
+    "fkCategoria": 4,
+    "nombreSubCategoria": "Correas"
+  }
+},
+{
+  "model": "inventario.subcategoria",
+  "pk": 12,
+  "fields": {
+    "fkCategoria": 4,
+    "nombreSubCategoria": "Gorros"
+  }
+},
+{
+  "model": "inventario.subcategoria",
+  "pk": 13,
+  "fields": {
+    "fkCategoria": 5,
+    "nombreSubCategoria": "ZapatosHombre"
+  }
+},
+{
+  "model": "inventario.subcategoria",
+  "pk": 14,
+  "fields": {
+    "fkCategoria": 5,
+    "nombreSubCategoria": "ZapatosMujer"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 1,
+  "fields": {
+    "fkSubCategoria": 1,
+    "nombre": "Camiseta1",
+    "descripcion": "descripcion1",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Camiseta1.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 2,
+  "fields": {
+    "fkSubCategoria": 1,
+    "nombre": "Camiseta2",
+    "descripcion": "descripcion2",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Camiseta2.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 3,
+  "fields": {
+    "fkSubCategoria": 1,
+    "nombre": "Camiseta3",
+    "descripcion": "descripcion3",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Camiseta3.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 4,
+  "fields": {
+    "fkSubCategoria": 1,
+    "nombre": "Camiseta4",
+    "descripcion": "descripcion4",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Camiseta4.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 5,
+  "fields": {
+    "fkSubCategoria": 2,
+    "nombre": "Camisa1",
+    "descripcion": "descripcion1",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Camisa1.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 6,
+  "fields": {
+    "fkSubCategoria": 2,
+    "nombre": "Camisa2",
+    "descripcion": "descripcion2",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Camisa2.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 7,
+  "fields": {
+    "fkSubCategoria": 2,
+    "nombre": "Camisa3",
+    "descripcion": "descripcion3",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Camisa3.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 8,
+  "fields": {
+    "fkSubCategoria": 2,
+    "nombre": "Camisa4",
+    "descripcion": "descripcion4",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Camisa4.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 9,
+  "fields": {
+    "fkSubCategoria": 3,
+    "nombre": "Pantalon1",
+    "descripcion": "descripcion1",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Pantalon1.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 10,
+  "fields": {
+    "fkSubCategoria": 3,
+    "nombre": "Pantalon2",
+    "descripcion": "descripcion2",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Pantalon2.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 11,
+  "fields": {
+    "fkSubCategoria": 3,
+    "nombre": "Pantalon3",
+    "descripcion": "descripcion3",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Pantalon3.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 12,
+  "fields": {
+    "fkSubCategoria": 3,
+    "nombre": "Pantalon4",
+    "descripcion": "descripcion4",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Pantalon4.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 13,
+  "fields": {
+    "fkSubCategoria": 4,
+    "nombre": "Blusa1",
+    "descripcion": "descripcion1",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Blusa1.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 14,
+  "fields": {
+    "fkSubCategoria": 4,
+    "nombre": "Blusa2",
+    "descripcion": "descripcion2",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Blusa2.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 15,
+  "fields": {
+    "fkSubCategoria": 4,
+    "nombre": "Blusa3",
+    "descripcion": "descripcion3",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Blusa3.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 16,
+  "fields": {
+    "fkSubCategoria": 4,
+    "nombre": "Blusa4",
+    "descripcion": "descripcion4",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Blusa4.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 17,
+  "fields": {
+    "fkSubCategoria": 4,
+    "nombre": "Blusa5",
+    "descripcion": "descripcion5",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Blusa5.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 18,
+  "fields": {
+    "fkSubCategoria": 4,
+    "nombre": "Blusa6",
+    "descripcion": "descripcion6",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Blusa6.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 19,
+  "fields": {
+    "fkSubCategoria": 4,
+    "nombre": "Blusa7",
+    "descripcion": "descripcion7",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Blusa7.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 20,
+  "fields": {
+    "fkSubCategoria": 4,
+    "nombre": "Blusa8",
+    "descripcion": "descripcion8",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Blusa8.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 21,
+  "fields": {
+    "fkSubCategoria": 5,
+    "nombre": "Falda1",
+    "descripcion": "descripcion1",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Falda1.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 22,
+  "fields": {
+    "fkSubCategoria": 5,
+    "nombre": "Falda2",
+    "descripcion": "descripcion2",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Falda2.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 23,
+  "fields": {
+    "fkSubCategoria": 5,
+    "nombre": "Falda3",
+    "descripcion": "descripcion3",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Falda3.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 24,
+  "fields": {
+    "fkSubCategoria": 5,
+    "nombre": "Falda4",
+    "descripcion": "descripcion4",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Falda4.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 25,
+  "fields": {
+    "fkSubCategoria": 6,
+    "nombre": "Vestido1",
+    "descripcion": "descripcion1",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Vestido1.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 26,
+  "fields": {
+    "fkSubCategoria": 6,
+    "nombre": "Vestido2",
+    "descripcion": "descripcion2",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Vestido2.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 27,
+  "fields": {
+    "fkSubCategoria": 6,
+    "nombre": "Vestido3",
+    "descripcion": "descripcion3",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Vestido3.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 28,
+  "fields": {
+    "fkSubCategoria": 6,
+    "nombre": "Vestido4",
+    "descripcion": "descripcion4",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Vestido4.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 29,
+  "fields": {
+    "fkSubCategoria": 13,
+    "nombre": "ZapatosHombre1",
+    "descripcion": "descripcion1",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/ZapatosHombre1.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 30,
+  "fields": {
+    "fkSubCategoria": 13,
+    "nombre": "ZapatosHombre2",
+    "descripcion": "descripcion2",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/ZapatosHombre2.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 31,
+  "fields": {
+    "fkSubCategoria": 13,
+    "nombre": "ZapatosHombre3",
+    "descripcion": "descripcion3",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/ZapatosHombre3.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 32,
+  "fields": {
+    "fkSubCategoria": 13,
+    "nombre": "ZapatosHombre4",
+    "descripcion": "descripcion4",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/ZapatosHombre4.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 33,
+  "fields": {
+    "fkSubCategoria": 14,
+    "nombre": "ZapatosMujer1",
+    "descripcion": "descripcion1",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/ZapatosMujer1.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 34,
+  "fields": {
+    "fkSubCategoria": 14,
+    "nombre": "ZapatosMujer2",
+    "descripcion": "descripcion2",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/ZapatosMujer2.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 35,
+  "fields": {
+    "fkSubCategoria": 14,
+    "nombre": "ZapatosMujer3",
+    "descripcion": "descripcion3",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/ZapatosMujer3.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 36,
+  "fields": {
+    "fkSubCategoria": 14,
+    "nombre": "ZapatosMujer4",
+    "descripcion": "descripcion4",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/ZapatosMujer4.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 37,
+  "fields": {
+    "fkSubCategoria": 1,
+    "nombre": "Camiseta1",
+    "descripcion": "descripcion1",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Camiseta5.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 38,
+  "fields": {
+    "fkSubCategoria": 1,
+    "nombre": "Camiseta2",
+    "descripcion": "descripcion2",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Camiseta6.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 39,
+  "fields": {
+    "fkSubCategoria": 1,
+    "nombre": "Camiseta3",
+    "descripcion": "descripcion3",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Camiseta7.jpg"
+  }
+},
+{
+  "model": "inventario.producto",
+  "pk": 40,
+  "fields": {
+    "fkSubCategoria": 1,
+    "nombre": "Camiseta4",
+    "descripcion": "descripcion4",
+    "iva": 19.0,
+    "precio": 23000,
+    "rutaImagen": "../media/productosImagenes/Camiseta8.jpg"
+  }
+},
+{
+  "model": "inventario.proveedor",
+  "pk": "0334242915368",
+  "fields": {
+    "direccion": "2022 Sommers Place",
+    "telefono": "4219896872"
+  }
+},
+{
+  "model": "inventario.proveedor",
+  "pk": "8367329046293",
+  "fields": {
+    "direccion": "2371 Golf Circle",
+    "telefono": "7580506150"
+  }
+},
+{
+  "model": "inventario.bodega",
+  "pk": 1,
+  "fields": {
+    "direccion": "2344 Street Charles",
+    "ciudad": "CALI"
+  }
+},
+{
+  "model": "inventario.bodega",
+  "pk": 2,
+  "fields": {
+    "direccion": "4560 Street Valeria",
+    "ciudad": "CALI"
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 1,
+  "fields": {
+    "fkProducto": 1,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 2,
+  "fields": {
+    "fkProducto": 1,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 3,
+  "fields": {
+    "fkProducto": 1,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 4,
+  "fields": {
+    "fkProducto": 2,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 5,
+  "fields": {
+    "fkProducto": 2,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 6,
+  "fields": {
+    "fkProducto": 2,
+    "talla": "L",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 7,
+  "fields": {
+    "fkProducto": 3,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 8,
+  "fields": {
+    "fkProducto": 3,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 9,
+  "fields": {
+    "fkProducto": 3,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 10,
+  "fields": {
+    "fkProducto": 4,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 11,
+  "fields": {
+    "fkProducto": 4,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 12,
+  "fields": {
+    "fkProducto": 4,
+    "talla": "L",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 13,
+  "fields": {
+    "fkProducto": 5,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 14,
+  "fields": {
+    "fkProducto": 5,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 15,
+  "fields": {
+    "fkProducto": 5,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 16,
+  "fields": {
+    "fkProducto": 6,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 17,
+  "fields": {
+    "fkProducto": 6,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 18,
+  "fields": {
+    "fkProducto": 6,
+    "talla": "L",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 19,
+  "fields": {
+    "fkProducto": 7,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 20,
+  "fields": {
+    "fkProducto": 7,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 21,
+  "fields": {
+    "fkProducto": 7,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 22,
+  "fields": {
+    "fkProducto": 8,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 23,
+  "fields": {
+    "fkProducto": 8,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 24,
+  "fields": {
+    "fkProducto": 8,
+    "talla": "L",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 25,
+  "fields": {
+    "fkProducto": 9,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 26,
+  "fields": {
+    "fkProducto": 9,
+    "talla": "SL",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 27,
+  "fields": {
+    "fkProducto": 9,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 28,
+  "fields": {
+    "fkProducto": 10,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 29,
+  "fields": {
+    "fkProducto": 10,
+    "talla": "SL",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 30,
+  "fields": {
+    "fkProducto": 10,
+    "talla": "L",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 31,
+  "fields": {
+    "fkProducto": 11,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 32,
+  "fields": {
+    "fkProducto": 11,
+    "talla": "SL",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 33,
+  "fields": {
+    "fkProducto": 11,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 34,
+  "fields": {
+    "fkProducto": 12,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 35,
+  "fields": {
+    "fkProducto": 12,
+    "talla": "SL",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 36,
+  "fields": {
+    "fkProducto": 12,
+    "talla": "L",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 37,
+  "fields": {
+    "fkProducto": 13,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 38,
+  "fields": {
+    "fkProducto": 13,
+    "talla": "SL",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 39,
+  "fields": {
+    "fkProducto": 13,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 40,
+  "fields": {
+    "fkProducto": 14,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 41,
+  "fields": {
+    "fkProducto": 14,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 42,
+  "fields": {
+    "fkProducto": 14,
+    "talla": "M",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 43,
+  "fields": {
+    "fkProducto": 15,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 44,
+  "fields": {
+    "fkProducto": 15,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 45,
+  "fields": {
+    "fkProducto": 15,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 46,
+  "fields": {
+    "fkProducto": 16,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 47,
+  "fields": {
+    "fkProducto": 16,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 48,
+  "fields": {
+    "fkProducto": 16,
+    "talla": "M",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 49,
+  "fields": {
+    "fkProducto": 17,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 50,
+  "fields": {
+    "fkProducto": 17,
+    "talla": "SL",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 51,
+  "fields": {
+    "fkProducto": 17,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 52,
+  "fields": {
+    "fkProducto": 18,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 53,
+  "fields": {
+    "fkProducto": 18,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 54,
+  "fields": {
+    "fkProducto": 18,
+    "talla": "M",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 55,
+  "fields": {
+    "fkProducto": 19,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 56,
+  "fields": {
+    "fkProducto": 19,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 57,
+  "fields": {
+    "fkProducto": 19,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 58,
+  "fields": {
+    "fkProducto": 20,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 59,
+  "fields": {
+    "fkProducto": 20,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 60,
+  "fields": {
+    "fkProducto": 20,
+    "talla": "M",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 61,
+  "fields": {
+    "fkProducto": 21,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 62,
+  "fields": {
+    "fkProducto": 21,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 63,
+  "fields": {
+    "fkProducto": 21,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 64,
+  "fields": {
+    "fkProducto": 22,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 65,
+  "fields": {
+    "fkProducto": 22,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 66,
+  "fields": {
+    "fkProducto": 22,
+    "talla": "M",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 67,
+  "fields": {
+    "fkProducto": 23,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 68,
+  "fields": {
+    "fkProducto": 23,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 69,
+  "fields": {
+    "fkProducto": 23,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 70,
+  "fields": {
+    "fkProducto": 24,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 71,
+  "fields": {
+    "fkProducto": 24,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 72,
+  "fields": {
+    "fkProducto": 24,
+    "talla": "M",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 73,
+  "fields": {
+    "fkProducto": 25,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 74,
+  "fields": {
+    "fkProducto": 25,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 75,
+  "fields": {
+    "fkProducto": 25,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 76,
+  "fields": {
+    "fkProducto": 26,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 77,
+  "fields": {
+    "fkProducto": 26,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 78,
+  "fields": {
+    "fkProducto": 26,
+    "talla": "M",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 79,
+  "fields": {
+    "fkProducto": 27,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 80,
+  "fields": {
+    "fkProducto": 27,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 81,
+  "fields": {
+    "fkProducto": 27,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 82,
+  "fields": {
+    "fkProducto": 28,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 83,
+  "fields": {
+    "fkProducto": 28,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 84,
+  "fields": {
+    "fkProducto": 28,
+    "talla": "M",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 85,
+  "fields": {
+    "fkProducto": 29,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 86,
+  "fields": {
+    "fkProducto": 29,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 87,
+  "fields": {
+    "fkProducto": 29,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 88,
+  "fields": {
+    "fkProducto": 30,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 89,
+  "fields": {
+    "fkProducto": 30,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 90,
+  "fields": {
+    "fkProducto": 30,
+    "talla": "M",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 91,
+  "fields": {
+    "fkProducto": 31,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 92,
+  "fields": {
+    "fkProducto": 31,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 93,
+  "fields": {
+    "fkProducto": 31,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 94,
+  "fields": {
+    "fkProducto": 32,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 95,
+  "fields": {
+    "fkProducto": 32,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 96,
+  "fields": {
+    "fkProducto": 32,
+    "talla": "M",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 97,
+  "fields": {
+    "fkProducto": 33,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 98,
+  "fields": {
+    "fkProducto": 33,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 99,
+  "fields": {
+    "fkProducto": 33,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 100,
+  "fields": {
+    "fkProducto": 34,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 101,
+  "fields": {
+    "fkProducto": 34,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 102,
+  "fields": {
+    "fkProducto": 34,
+    "talla": "M",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 103,
+  "fields": {
+    "fkProducto": 35,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 104,
+  "fields": {
+    "fkProducto": 35,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 105,
+  "fields": {
+    "fkProducto": 35,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 106,
+  "fields": {
+    "fkProducto": 36,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 107,
+  "fields": {
+    "fkProducto": 36,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 108,
+  "fields": {
+    "fkProducto": 36,
+    "talla": "M",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 109,
+  "fields": {
+    "fkProducto": 37,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 110,
+  "fields": {
+    "fkProducto": 37,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 111,
+  "fields": {
+    "fkProducto": 37,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 112,
+  "fields": {
+    "fkProducto": 38,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 113,
+  "fields": {
+    "fkProducto": 38,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 114,
+  "fields": {
+    "fkProducto": 38,
+    "talla": "L",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 115,
+  "fields": {
+    "fkProducto": 39,
+    "talla": "XS",
+    "nit": "8367329046293",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 116,
+  "fields": {
+    "fkProducto": 39,
+    "talla": "S",
+    "nit": "8367329046293",
+    "color": "gris",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 117,
+  "fields": {
+    "fkProducto": 39,
+    "talla": "L",
+    "nit": "8367329046293",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 118,
+  "fields": {
+    "fkProducto": 40,
+    "talla": "XS",
+    "nit": "0334242915368",
+    "color": "morado",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 119,
+  "fields": {
+    "fkProducto": 40,
+    "talla": "S",
+    "nit": "0334242915368",
+    "color": "negro",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+},
+{
+  "model": "inventario.detallesproducto",
+  "pk": 120,
+  "fields": {
+    "fkProducto": 40,
+    "talla": "L",
+    "nit": "0334242915368",
+    "color": "blanco",
+    "fkBodega": 1,
+    "cantidad": 20
+  }
+}
+]

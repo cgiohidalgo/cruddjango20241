@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+{% load static %}
+<!-- jQuery -->
+<script src="{% static 'css/registroCliente/jquery-3.3.1.slim.min.js' %}"></script>
+<!-- Fengyuan Chen's Datepicker -->
+<link rel="stylesheet" href="{% static 'css/registroCliente/datepicker.min.css' %}" />
+<script src="{% static 'css/registroCliente/datepicker.min.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="col-md-6 col-md-offset-3" style="padding: 75px">
+    <div class="panel-login panel">
+      <div class="panel-heading">
+        <center>
+          <h1> Formulario de Registro </h1>
+        </center>
+      </div>
+    </div>
+
+    <div class="panel-body" style="background-color:#FEF0F0;">
+      <div class="row">
+        <div class="col-lg-12">
+          <form id="login-form" name='registroCliente' method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="nombreCliente">Nombre</label>
+              <input required type="text" name="nombreCliente" id="nombreCliente" tabindex="1" class="form-control" placeholder="Nombre" value={{nombrer}}>
+            </div>
+
+            <div class="form-group">
+              <label for="claveCliente">Clave</label>
+              <input required type="password" name="claveCliente" id="claveCliente" tabindex="1" class="form-control" placeholder="Contraseña" value={{clave}}>
+            </div>
+
+            <div class="form-group">
+              <label for="direccionCliente">Dirección</label>
+              <input required type="text" name="direccionCliente" id="direccionCliente" tabindex="1" class="form-control" placeholder="Direccion actual" value={{direccion}}>
+            </div>
+
+            <div class="form-group">
+              <label for="telefonoCliente">Telefono</label>
+              <input required type="text" name="telefonoCliente" id="telefonoCliente" tabindex="1" class="form-control" placeholder="Telefono" value={{telefono}}>
+            </div>
+
+            <div class="form-group">
+              <label for="tipoDocumento">Tipo de Documento</label>
+                <select class="form-control" id="tipoDocumento" name="tipoDocumento">
+                  <option value=""> --- Tipo de Documento --- </option>
+                  <option value="TI">Tarjeta de Identidad</option>
+                  <option value="CC">Cedula de Ciudadania</option>
+                  <option value="PAS">Pasaporte</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+              <label for="documentoCliente">No Documento</label>
+              <input required type="text" name="documentoCliente" id="documentoCliente" tabindex="1" class="form-control" placeholder="Documento" value={{numeroDoc}}>
+            </div>
+
+            <div class="form-group">
+              <label for="datepicker">Fecha de Nacimiento</label>
+              <input required id="datepicker" name='fechaNacimiento' class="form-control" value={{fechaNacimiento}}>
+                <script>
+                  $(function () {
+                    $("#datepicker").datepicker({format:'yyyy-mm-dd'},);
+                  });
+                </script>
+            </div>
+
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Registrarse">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>          
+</div>
+{% endblock %}

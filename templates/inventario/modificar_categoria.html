@@ -1,0 +1,137 @@
+{% extends 'baseAdmin.html' %}
+
+
+{% block head %}
+
+{% load static %}
+
+{% endblock %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/modf_categoria.css' %}">
+<link rel="stylesheet" href="{% static 'css/section.css' %}">
+
+<!-- contact  -->
+<div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Modificar Categoria </h1>
+      </center>
+    </div>
+  </div>
+
+  <div class="panel-body">    
+    <div class="row">
+      <form method='post' id='seleccionCategoria-form' name='seleccionar_categoria' class='login-form'>
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="categoria">Categoria</label>
+          <select class="form-control" id="categoria" name="categoria" onChange="form.submit();">
+            <option value="-1"  name='-1'>Categoria</option>
+            {% for categoria in categorias %}
+              {% if idCategoria == categoria.pkCategoria  %}
+                <option selected value={{categoria.pkCategoria}} name={{categoria.nombreCategoria}}>{{categoria.nombreCategoria}}</option>
+              {% else %}
+                <option value={{categoria.pkCategoria}} name={{categoria.nombreCategoria}}>{{categoria.nombreCategoria}}</option>
+              {% endif %}
+            {% endfor %}
+          </select>
+        </div>
+      </form>
+    </div>
+    <br>
+
+    <div class="row">
+      <form method='post' id='modificarCategoria-form' enctype="multipart/form-data" name='modificar_categoria' class='login-form'>
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="categoria">Categoria</label>
+          <input type="text" name="nombreCategoria" id="nombreCategoria" placeholder="Nombre" value="{{nombreCategoria}}"></input>
+          
+          <label for="idCategoria">Id</label>
+          <input type="text" readonly placeholder="id" name="idCat" id="idCat" value="{{idCategoria}}"></input>          
+        </div>
+
+        <div class="form-group">
+          <div class="custom-file">
+            <label for="buscadorImagen">Imagen</label>
+            <center>
+            <img name="actualImg" id="actualImg" height="25%" width="25%" src="{{rutaImagenO}}">
+             </center>
+            <div>
+              <br>
+              <input type="file" class="custom-file-input" id="buscadorImagen" name="buscadorImagen" lang="es-ES" accept="image/*">
+              <label class="custom-file-label" for="buscadorImagen">Seleccionar Archivo</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" name="modfCat-submit" id="modfCat-submit" tabindex="4" class="form-control btn btn-register" value="Modificar"></input>
+        </div>
+      </form>
+    </div>
+    <br><br>
+  </div>
+
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> SubCategoria </h1>
+      </center>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div class="row">
+        <form method='post' id='modificarCategoria-form' name='modificar_categoria' class='login-form'>
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="categoria">Categoria</label>
+          <input type="text" readonly value="{{nombreCategoria}}"></input>
+          <label for="idCategoria">Id</label>
+          <input type="text" readonly placeholder="id" name="idCat" id="idCat" value="{{idCategoria}}"></input>
+        </div>
+        <div class="form-group">
+          <label for="subCategoria">SubCategoria</label>                 
+          <select class="form-control" id="subCategoria" name="subCategoria" onChange="form.submit();">
+            <option value="-1">subCategoria</option>
+            {% for subCategoria in subCategorias %}
+              {% if idSubCategoria == subCategoria.pkSubCategoria   %}
+                <option selected value={{subCategoria.pkSubCategoria}}>{{subCategoria.nombreSubCategoria}}</option>
+              {% else %}
+              <option value={{subCategoria.pkSubCategoria}}>{{subCategoria.nombreSubCategoria}}</option>
+              {% endif %}
+              {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="subCategoria">Nombre</label>
+          <input type="text" name="nombreSubCategoria" id="nombreSubCategoria" placeholder="Nombre" value="{{nombreSubCategoria}}"></input>
+
+          <label for="idSubCategoria">Id</label>
+          <input type="text" readonly placeholder="id" name="idSubCategoria" value="{{idSubCategoria}}"></input>
+        </div>
+        <div class="form-row">
+          <div>
+            <input type="submit" name="SubCat-submit" id="SubCat-submit" tabindex="4" class="form-control btn btn-register" value="Agregar"></input>
+          </div>
+          <br>
+          <div>
+            <input type="submit" name="SubCat-submit" id="SubCat-submit" tabindex="4" class="form-control btn btn-register" value="Modificar"></input>
+          </div>
+          <br>
+          <div>
+            <input type="submit" name="SubCat-submit" id="SubCat-submit" tabindex="4" class="form-control btn btn-register" value="Eliminar"></input>
+          </div>
+        </div>
+      </form>
+    </div>
+    <br>
+  </div>
+</div>
+
+{% endblock %}

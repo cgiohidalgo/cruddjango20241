@@ -1,0 +1,142 @@
+{% extends 'baseAdmin.html' %}
+
+
+
+{% block content %}
+
+<div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Consultar Productos </h1>
+      </center>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        <form id="formulario-producto" action="#" method="post">
+          {% csrf_token %}
+
+
+          <div class="panel-login panel">
+            <center>
+              <h4> Seleccione uno o varios filtros de busqueda </h4>
+            </center>
+          </div>
+
+          <div class="form-group">
+            <label for="producto">Referencia</label>
+            <select class="form-control" id="producto" name="producto" onChange="form.submit();">
+              <option value="-1"  name='vacio'>Seleccione una Referencia</option>
+              {% for producto in productos %}
+                {% if idProducto == producto.pkProducto   %}
+                <option selected value={{producto.pkProducto}} name={{producto.pkProducto}}>{{producto.pkProducto}} - {{producto.nombre}}</option>
+                {% else %}
+                <option value={{producto.pkProducto}} name={{producto.pkProducto}}>{{producto.pkProducto}} - {{producto.nombre}}</option>
+                {% endif %} 
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="form-group">
+              <label for="proveedor">Proveedor</label>
+              <select class="form-control" id="proveedor" name="proveedor" onChange="form.submit();">
+                <option value="-1"  name='vacio'>Seleccione un Proveedor</option>
+                {% for proveedor in proveedores %}
+                  {% if idProveedor == proveedor.pknit   %}
+                    <option selected value={{proveedor.pknit}} name={{proveedor.pknit}}>{{proveedor.pknit}}</option>
+                  {% else %}
+                    <option value={{proveedor.pknit}} name={{proveedor.pknit}}>{{proveedor.pknit}}</option>
+                  {% endif %}  
+                {% endfor %}
+              </select>
+          </div>
+
+          <div class="form-group">
+              <label for="bodega">Bodega</label>
+              <select class="form-control" id="bodega" name="bodega" onChange="form.submit();">
+                <option value="-1"  name='vacio'>Seleccione una Bodega</option>
+                {% for bodega in bodegas %}
+                  {% if idBodega == bodega.pkBodega   %}
+                    <option selected value={{bodega.pkBodega}} name={{bodega.pkBodega}}>{{bodega.pkBodega}} - {{bodega.ciudad}}</option>
+                  {% else %}
+                    <option value={{bodega.pkBodega}} name={{bodega.pkBodega}}>{{bodega.pkBodega}} - {{bodega.ciudad}}</option>
+                  {% endif %}  
+                {% endfor %}
+              </select>
+          </div>
+
+
+          <div class="panel-login panel">
+            <center>
+              <h4> Seleccione el producto a modificar</h4>
+            </center>
+          </div>
+
+          <div class="form-group">
+            <label for="producto">Producto</label>
+            <select class="form-control" id="detalle" name="detalle" onChange="form.submit();">
+              <option value="-1"  name='vacio'>Seleccione el Producto</option>
+              {% for detalle in detalles %}
+                {% if idDetalle == detalle.pkDetallesP   %}
+                  <option selected value={{detalle.pkDetallesP}} name={{detalle.pkDetallesP}}>{{detalle.talla}} - {{detalle.color}}</option>
+                {% else %}
+                  <option value={{detalle.pkDetallesP}} name={{detalle.pkDetallesP}}>{{detalle.talla}} - {{detalle.color}}</option>
+                {% endif %}  
+              {% endfor %}
+            </select>
+          </div>
+
+          <!-- ZONA PARA MODIFICAR CAMPOS   -->
+          <br>
+          <div class="form-group">
+            <div class="panel-login panel">
+              <center>
+                <h3> Datos del producto seleccionado </h3>
+              </center>
+            </div>
+          </div>
+
+          <div class="form-group">
+              <label for="referencia">Referencia</label>
+              <input readonly placeholder="Referencia" id="inputReferencia" name="inputReferencia" type="text" class="form-control" value="{{referencia}}">
+
+              <div hidden>
+                <input readonly id="idref" name="idref" type="text" value="{{idref}}" class="form-control">
+              </div>
+          </div>
+
+          <div class="form-group">
+            <label for="proveedor">Proveedor</label>
+            <input readonly placeholder="Proveedor" id="inputProveedor" name="inputProveedor" type="text" class="form-control" value="{{nit}}">
+          </div>
+
+          <div class="form-group">
+            <label for="bodega">Bodega</label>
+            <input readonly placeholder="Bodega" id="inputBodega" name="inputBodega" type="text" class="form-control" value="{{pkBodega}}">
+          </div>
+
+          <div class="form-group">
+            <label for="talla">Talla</label>
+            <input readonly placeholder="Talla" id="inputTalla" name="inputTalla" type="text" class="form-control" value="{{talla}}">
+          </div>
+
+          <div class="form-group">
+            <label for="color">Color</label>
+            <input readonly placeholder="Color" id="inputColor" name="inputColor" type="text" class="form-control" value="{{color}}">
+          </div>          
+
+          <div class="form-group">
+            <label for="inputCant">Cantidad</label>
+            <input readonly placeholder="Cantidad" id="inputCant" name="inputCant" type="number" class="form-control" value="{{cantidad}}">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

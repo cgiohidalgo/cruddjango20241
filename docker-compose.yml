@@ -1,16 +1,28 @@
-version: '3.8'
+version: '3'
+
 services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    #entrypoint: ./entrypoint.sh
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
   db:
-    container_name: pg_container
-    image: postgres
+    container_name: psql
+    build: ./databaseDefault
     hostname: postgreServer
-    restart: always
-    environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: root
-      POSTGRES_DB: productos
     ports:
       - "5432:5432"
+    #volumes:
+    #  - ./back/db/scriptProyecto.sql:/docker-entrypoint.initdb.d/db.sql
+    environment:
+      POSTGRES_DB: novaDB
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
   pgadmin:
     container_name: pgadmin4_container
     image: dpage/pgadmin4
@@ -20,4 +32,3 @@ services:
       PGADMIN_DEFAULT_PASSWORD: root
     ports:
       - "5050:80"
-  

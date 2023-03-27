@@ -1,0 +1,100 @@
+{% extends 'baseAdmin.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<script src="{% static 'css/registroCliente/jquery-3.3.1.slim.min.js' %}"></script>
+<!-- Fengyuan Chen's Datepicker -->
+<link rel="stylesheet" href="{% static 'css/registroCliente/datepicker.min.css' %}" />
+<script src="{% static 'css/registroCliente/datepicker.min.js' %}"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3" style="padding: 75px">
+        <div class="panel-login panel">
+          <div class="panel-heading">
+            <center>
+              <h1> Modificar Descuento </h1>
+            </center>
+          </div>
+        </div>
+        <div class="panel-body" >
+          <div class="row">
+            <div class="col-lg-12">
+              <form id="login-form" name='ModificarDescuento' method="post">
+                  {% csrf_token %}
+
+                  <div class="form-group">
+                    <label for="descuentoCategoria">Descuentos por categoria</label>
+                    <select class="form-control" id="descuentoCategoria" name="descuentoCategoria" onChange="form.submit();">
+                        <option selected value=-1>Seleccione un descuento de categoria</option>
+                        {% for cat in descuentosCategoria %}
+                          {% if descuentoCategoria == cat.pkDescuentoCategoria  %}
+                            <option selected value={{cat.pkDescuentoCategoria}} >{{cat.fechaInicio}}, {{cat.fechaFin}} - {{cat.porcentajeDescuento}}%</option>
+                          {% else %}
+                            <option value={{cat.pkDescuentoCategoria}} >{{cat.fechaInicio}}, {{cat.fechaFin}} - {{cat.porcentajeDescuento}}%</option>
+                          {% endif %}
+                        {% endfor %}
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="descuentoSubcategoria">Descuentos por subcategoria</label>
+                    <select class="form-control" id="descuentoSubcategoria" name="descuentoSubcategoria" onChange="form.submit();">
+                        <option selected value=-1>Seleccione un descuento de subcategoria</option>
+                        {% for subcat in descuentosSubcategorias %}
+                          {% if descuentoSubcategoria == subcat.pkDescuentoSubCategoria %}
+                            <option selected value={{subcat.pkDescuentoSubCategoria}}>{{subcat.fechaInicio}}, {{subcat.fechaFin}} - {{subcat.porcentajeDescuento}}%</option>
+                          {% else %}
+                            <option value={{subcat.pkDescuentoSubCategoria}}>{{subcat.fechaInicio}}, {{subcat.fechaFin}} - {{subcat.porcentajeDescuento}}%</option>
+                          {% endif %}
+                        {% endfor %}
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="descuentoProducto">Descuentos por producto</label>
+                    <select class="form-control" id="descuentoProducto" name="descuentoProducto">
+                        <option selected value=-1>Seleccione un descuento de producto</option>
+                        {% for prod in descuentosProductos %}
+                          {% if descuentoProducto == prod.pkDescuentoProducto %}
+                            <option selected value={{prod.pkDescuentoProducto}}>{{prod.fechaInicio}}, {{prod.fechaFin}} - {{prod.porcentajeDescuento}}%</option>
+                          {% else %}
+                            <option value={{prod.pkDescuentoProducto}}>{{prod.fechaInicio}}, {{prod.fechaFin}} - {{prod.porcentajeDescuento}}%</option>
+                          {% endif %}
+                        {% endfor %}
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="fecha_fin">Fecha de fin</label>
+                      <input id="fecha_fin" name='fecha_fin' class="form-control">
+                      <script>
+                        $(function () {
+                          $("#fecha_fin").datepicker({format:'yyyy-mm-dd'},);
+                        });
+                      </script>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="descuento"> Descuento</Label>
+                    <input id="descuento" name='descuento' class="form-control">
+                  </div>
+                  
+                  <div class="form-group">
+                      <div class="row">
+                          <div class="col-sm-6 col-sm-offset-3">
+                              <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Modificar">
+                          </div>
+                      </div>
+                  </div>
+
+              </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

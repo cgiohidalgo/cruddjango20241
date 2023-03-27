@@ -1,0 +1,32 @@
+<!doctype html>
+<html style="background-color:#FEF0F0;">
+    <head>
+        <meta charset="UTF-8">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'bootstrap/style.css' %}">
+
+        {% block head %}
+        {% endblock %}
+        <title>Nova</title>
+    </head>
+    <body style="background-color:#FEF0F0;">
+
+        {% include 'navbarAdmin.html' %}
+
+        {% block message %}
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+        {% endblock %}
+
+        {% block content %}
+        Todo lo demas
+        {% endblock %}
+
+    </body>
+</html>

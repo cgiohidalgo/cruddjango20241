@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% load static %}
+
+{% endblock %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/section.css' %}">
+<div style="padding: 5px">
+        <div id="column-left" class="col-sm-4 col-lg-3 " >
+            <div id="category-menu" class="navbar collapse in mb_40" aria-expanded="true" role="button">
+            <div class="nav-responsive">
+                <div class="heading-part">
+                <h2 class="main_title" >SUBCATEGORIAS</h2>
+                </div>
+                {% for sub in subCategorias %}
+                    <ul class="nav  main-navigation collapse in">
+                        <li><a href="{% url 'inventario:productosSubCategorias' nombre=nombre categoria=categoria subCategoria=sub.pkSubCategoria %}" style="padding: 2px; background-color: white;">{{sub.nombreSubCategoria}}</a></li>
+                    </ul>
+                {% endfor %}
+            </div>
+            </div>
+        </div>
+    <div class="column">
+        <div class="col-md-6 col-md-offset-1">
+            <div  style="padding: 5px">
+                <div class="panel-login panel">
+                    <div class="panel-heading">
+                        <center>
+                        <h2> Detalles </h2>
+                        </center>
+                    </div>
+                </div>
+                <div class="panel-body" style="background-color:#FEF0F0;">
+                    <div class="product-layout  product-grid  col-md-6 col-sm-4 col-xs-12">
+                        <div class="item">
+                            <div class="product-thumb clearfix mb_30">
+                                <div class="image product-imageblock">
+                                    <img src="{{producto.rutaImagen.url}}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-layout  product-grid  col-md-6 col-sm-4 col-xs-12">
+                        <div class="item">
+                            <div class="product-thumb clearfix mb_30">
+                                <center>
+                                    <h3>{{producto.nombre}}</h3>
+                                </center>
+                                    <br>
+                                    <span>{{producto.descripcion}}</span>
+                                    <br>
+                                    <form method='post' id='detallesproducto-form' name='detallesproducto_seleccionar' class='login-form'>
+                                    {% csrf_token %}
+                                    <label>Productos disponibles: </label>
+                                    <select class="form-control" id="detalleproducto" name="detalleproducto" onChange="form.submit();">
+                                        {% for dp in detallesproducto %}
+                                            {% if idDetalleproducto == dp.pkDetallesP   %}
+                                            <option selected value={{dp.pkDetallesP}} name={{dp.pkDetallesP}}>Talla: {{dp.talla}} - Color: {{dp.color}}</option>
+                                            {% else %}
+                                            <option value={{dp.pkDetallesP}} name={{dp.pkDetallesP}}>Talla: {{dp.talla}} - Color: {{dp.color}}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </select>
+                                    <br>
+                                    <div class="block">
+                                        <label>Talla: </label>
+                                        <span>{{productoS.talla}}</span>
+                                    </div>
+                                    <div class="block">
+                                        <label>Color: </label>
+                                        <span>{{productoS.color}}</span>
+                                    </div>
+                                    <div class="block">
+                                        {% if productoS.cantidad == 0 %}
+                                            <label style="color: crimson">No hay productos disponibles</label>
+                                        {% else %}
+                                            <label>Cantidad Disponible: </label>
+                                            <span>{{productoS.cantidad}}</span>
+                                        {% endif %}
+                                    </div>
+                                    <label for="inputCantidad">Cantidad a comprar:</label>
+                                    <div class="form-group" >                                
+                                        <input id="inputCantidad" type="integer" value="{{cantidad}}" name="cantidad">
+                                    </div>
+                                    <center>
+                                    <span class="price"><span class="amount"><span class="currencySymbol">$</span>{{precio}} COP</span></span>
+                                    <br><br>
+                                    {% if esCliente  %}
+                                        {% if productoS.cantidad == 0 %}
+                                            <label style="color: crimson">No hay productos para comprar</label>
+                                        {% else %}
+                                            <input type="submit" name="AgregarCarrito-submit" id="AgregarCarrito-submit" tabindex="1" class="form-control btn btn-register" value="AgregarCarrito"></input>
+                                        {% endif %}
+                                    {% else %}
+                                    <label for="advertencia" style="color: crimson">Para poder adicionar al carrito, debe tener su sesion iniciada.</label>
+                                    {% endif %}
+                                </form>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>               
+        </div>
+    </div>
+</div>
+
+{% endblock %}

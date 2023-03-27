@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% load static %}
+
+{% endblock %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/section.css' %}">
+<div style="padding: 10px" class="row">
+  <div class="column">
+    <div id="column-left" class="col-sm-4 col-lg-3 ">
+      <br>
+      <div id="category-menu" class="navbar collapse in mb_40" aria-expanded="true" role="button">
+        <div class="nav-responsive">
+          <div class="heading-part">
+            <h2 class="main_title" >OPCIONES</h2>
+          </div>
+          <ul class="nav  main-navigation collapse in">
+              <li><a href="{% url 'usuarios:clientePerfil' nombre %}" style="padding: 2px; background-color: white;">Informacion Personal {{cliente.nombre}}</a></li>
+          </ul>
+          <ul class="nav  main-navigation collapse in">
+              <li><a href="{% url 'usuarios:clienteHistorialCompras' nombre %}" style="padding: 2px; background-color: white;">Mis Compras</a></li>
+          </ul> 
+          <ul class="nav  main-navigation collapse in">
+              <li><a href="" style="padding: 2px; background-color: white;">Solicitar Eliminacion</a></li>
+          </ul> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="col-md-6 col-md-offset-1">
+      <div  style="padding: 5px">
+        <div class="panel-login panel">
+          <div class="panel-heading">
+            <center>
+            <h2> Historial de Compras </h2>
+            </center>
+          </div>
+        </div>
+
+        <div class="panel-body" style="background-color:#FEF0F0;">
+          <div class="panel-heading">
+            <div class="col-lg-12">
+              {% for factura in facturas %}
+                <div class="panel-login panel">
+                  <div class="panel-heading">
+                    <form id="form" name='perfilCliente' method="post" >
+                      <center>
+                        <label for="inputNombre">Num. Factura: {{factura.id}} - Fecha: {{factura.fecha}}</label>
+                      </center>
+                      <div class="form-group">                                
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col"><center>Producto</center></th>
+                              <th scope="col"><center>Talla</center></th>
+                              <th scope="col"><center>Color</center></th>
+                              <th scope="col"><center>Cantidad</center></th>
+                              <th scope="col"><center>Precio</center></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for detalle in factura.detalle %}
+                              <tr>
+                                <td><center>{{detalle.fkDetallesP.fkProducto.nombre}}</center></td>
+                                <td><center>{{detalle.fkDetallesP.talla}}</center></td>
+                                <td><center>{{detalle.fkDetallesP.color}}</center></td>
+                                <td><center>{{detalle.cantidad}}</center></td>
+                                <td><center>{{detalle.precio}}</center></td>
+                              </tr>
+                              {% empty %}
+                              <p>No hay productos</p>
+                            {% endfor %}
+                          </tbody>
+                        </table>
+                      </div>                                            
+                    </form>
+
+                    <div>
+                      <label for="total" >Total:{{factura.total}}</label>
+                    </div>                    
+                  </div>
+                </div>
+                <br>
+                {% empty %}
+                  <div class="panel-login panel">
+                    <div class="panel-heading">
+                      <center>
+                      <h3> No Hay Registros </h3>
+                      </center>
+                    </div>
+                  </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>               
+    </div>
+  </div>
+</div>
+
+{% endblock %}

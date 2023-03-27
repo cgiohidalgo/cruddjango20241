@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% load static %}
+
+{% endblock %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/section.css' %}">
+<div style="padding: 10px" class="row">
+    <div class="column">
+        <div id="column-left" class="col-sm-4 col-lg-3 ">
+            <br>
+            <div id="category-menu" class="navbar collapse in mb_40" aria-expanded="true" role="button">
+            <div class="nav-responsive">
+                <div class="heading-part">
+                <h2 class="main_title" >OPCIONES</h2>
+                </div>
+                    <ul class="nav  main-navigation collapse in">
+                        <li><a href="{% url 'usuarios:clientePerfil' nombre %}" style="padding: 2px; background-color: white;">Informacion Personal {{cliente.nombre}}</a></li>
+                    </ul>
+                    <ul class="nav  main-navigation collapse in">
+                        <li><a href="{% url 'usuarios:clienteHistorialCompras' nombre %}" style="padding: 2px; background-color: white;">Mis Compras</a></li>
+                    </ul> 
+                    <ul class="nav  main-navigation collapse in">
+                        <li><a href="{% url 'usuarios:clienteEliminar' nombre %}" style="padding: 2px; background-color: white;">Solicitar Eliminacion</a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="col-md-6 col-md-offset-1">
+            <div  style="padding: 5px">
+                <div class="panel-login panel">
+                    <div class="panel-heading">
+                        <center>
+                        <h2> Mi Perfil </h2>
+                        </center>
+                    </div>
+                </div>
+                <div class="panel-body" style="background-color:#FEF0F0;">
+                    <div class="col-lg-12">
+                        {% for atributo in cliente %}
+                        <form id="form" name='perfilCliente' method="post" style="padding: 10px; margin-left: 27%">
+                            <label for="inputNombre">Nombre de Usuario</label>
+                            <div class="form-group">                                
+                                <input id="inputNombre" type="text" name="nombreCliente" tabindex="1" readonly value="{{atributo.nombre}}" >
+                            </div>
+                            <label for="inputFecha">Fecha de Nacimiento</label>
+                            <div class="form-group">                                
+                                <input id="inputFecha" type="text" name="fechaNacimiento" tabindex="2" readonly value="{{atributo.fechaNacimiento}}">
+                            </div>
+                            <label for="inputDireccion">Direccion</label>
+                            <div class="form-group">                                    
+                                <input id="inputDireccion" type="text" name="direccion"  tabindex="2" readonly value="{{atributo.direccion}}">
+                            </div>
+                            <label for="inputTelefono">Telefono</label>
+                            <div class="form-group">                                
+                                <input id="inputTelefono" type="text" name="telefono"  tabindex="2" readonly value="{{atributo.telefono}}">
+                            </div>
+                            <label for ="inputDocumento">Numero de Documento</label>
+                            <div class="form-group">                                    
+                                <input id="inputDocumento" type="text" name="numeroDocumento"  tabindex="2" readonly value="{{atributo.numeroDocumento}}">
+                            </div>
+                        </form>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>               
+        </div>
+    </div>
+</div>
+
+{% endblock %}

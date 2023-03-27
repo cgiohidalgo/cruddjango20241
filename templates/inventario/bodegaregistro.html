@@ -1,0 +1,63 @@
+{% extends 'baseAdmin.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Crear bodega </h1>
+      </center>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        <form id="login-form" name='crearBodega' method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="ciudad">Ciudad</label>
+              <select class="form-control" id="ciudad" name="ciudad">{
+                    ('BOG','Bogotá'),
+                    ('MED','Medellín'),
+                    ('CALI','Cali'),
+                    ('B/Q','Barranquilla'),
+                    ('CART','Cartagena'),
+                    ('CUC','Cucuta'),
+                    ('SOL','Soledad'),
+                    ('IBG','Ibague'),
+                    ('BCM','Bucaramanga'),
+                    ('SOAC','Soacha'),
+                }
+                  <option value="BOG">Bogotá</option>
+                  <option value="MED">Medellín</option>
+                  <option value="CALI">Cali</option>
+                  <option value="B/Q">Barranquilla</option>
+                  <option value="CART">Cartagena</option>
+                  <option value="CUC">Cucuta</option>
+                  <option value="Sol">Soledad</option>
+                  <option value="IBG">Ibague</option>
+                  <option value="BCM">Bucaramanga</option>
+                  <option value="SOAC">Soacha</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección</label>
+                <input type="text" name="direccion" id="direccion" tabindex="1" class="form-control" placeholder="Direccion">
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Crear">
+                    </div>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

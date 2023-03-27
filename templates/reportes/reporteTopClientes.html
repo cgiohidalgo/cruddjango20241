@@ -1,0 +1,84 @@
+{% extends 'baseAdmin.html' %}
+
+
+{% block head %}
+
+{% load static %}
+
+<script src="{% static 'graficos/plotly.js' %}"></script>
+
+<script src="{% static 'css/registroCliente/jquery-3.3.1.slim.min.js' %}"></script>
+
+
+{% endblock %}
+
+{% block content %}
+<div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Reporte: Top Clientes </h1>
+      </center>
+    </div>
+  </div>
+
+  <form id="login-form" name='reporte' method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="top">Top:</label>
+      <input type="number" name="top" id="top" class="form-control" placeholder="" value="{{top}}">
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <input type="submit" name="generar-submit" id="generar-submit" tabindex="4" class="form-control btn btn-register" value="Generar Reporte">
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <br>
+  <center>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Productos Comprados</th>
+          <th scope="col">Dinero Gastado</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for cliente in clientes %}
+          <tr>
+            <td>{{cliente.nombre}}</td>
+            <td>{{cliente.cantidad}}</td>
+            <td>{{cliente.dinero}}</td>
+          </tr>
+          {% empty %}
+          <p>No hay clientes registrados o la busqueda no arrojó resultados</p>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div id="tester" style="width:600px;height:250px;"></div>
+  </center>
+</div>
+
+  <script>
+          TESTER = document.getElementById('tester');
+          Plotly.plot( TESTER, [
+            {
+              x:{{datax|safe}},
+              y:{{datay}},
+              type: 'bar'
+            }
+          ], 
+            {
+            margin: { t: 0 } 
+            } 
+          );
+        </script>
+  
+{% endblock %}

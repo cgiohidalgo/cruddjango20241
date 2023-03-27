@@ -1,0 +1,401 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<script src="{% static 'css/ventaCliente/jquery-1.11.1.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/ventaCliente/styleStepper.css' %}" />
+<div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Mi Carrito </h1>
+      </center>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        {% if productosCarrito %}
+                
+        <div>
+          <form method='post' id='eliminar' name='eliminar' class='login-form'>
+            {% csrf_token %}
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col"><center>Categoría</center></th>
+                  <th scope="col"><center>Subcategoría</center></th>
+                  <th scope="col"><center>Producto</center></th>
+                  <th scope="col"><center>Talla</center></th>
+                  <th scope="col"><center>Color</center></th>
+                  <th scope="col"><center>Cantidad</center></th>
+                  <th scope="col"><center>Precio unidad</center></th>
+                  <th scope="col"><center>Eliminar</center></th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for carrito in productosCarrito %}
+                  <tr>
+                    <td><center>{{carrito.fkDetalleProducto.fkProducto.fkSubCategoria.fkCategoria.nombreCategoria}}</center></td>
+                    <td><center>{{carrito.fkDetalleProducto.fkProducto.fkSubCategoria.nombreSubCategoria}}</center></td>
+                    <td><center>{{carrito.fkDetalleProducto.fkProducto.nombre}}</center></td>
+                    <td><center>{{carrito.fkDetalleProducto.talla}}</center></td>
+                    <td><center>{{carrito.fkDetalleProducto.color}}</center></td>
+                    <td><center>{{carrito.cantidad}}</center></td>
+                    <td><center>{{carrito.precioActual}}</center></td>
+                    <td>
+                      <center>
+                        <button type="submit" name="eliminar" value="{{carrito.pkCarrito}}"><img src="{% static 'images/Iconos/delete.png' %}"></button>
+                      </center>
+                    </td>
+                  </tr>
+                  {% empty %}
+                  <p>No hay productos agregados al carrito</p>
+                {% endfor %}
+              </tbody>
+            </table>
+            <div class="block" style="text-align:right">
+            <h4>
+            <label>Total:  </label>
+            <span>{{totalcompra}}</span>
+            </h4>
+          </div>
+          </form>
+        </div>
+
+        {% else %}
+          <p>
+            <div class="alert alert-info" role="alert">
+              No hay ningún artículo en el carrito
+              </div>
+          </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-8 col-md-offset-2">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Compra </h1>
+      </center>
+    </div>
+  </div>
+    
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+          <div class="stepwizard col-md-offset-3">
+            <div class="stepwizard-row setup-panel">
+              <div class="stepwizard-step">
+                <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                <p>Paso 1</p>
+              </div>
+              <div class="stepwizard-step">
+                <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled>2</a>
+                <p>Paso 2</p>
+              </div>
+              <div class="stepwizard-step">
+                <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled>3</a>
+                <p>Paso 3</p>
+              </div>
+              <div class="stepwizard-step">
+                  <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled>4</a>
+                  <p>Paso 4</p>
+                </div>
+            </div>
+          </div>
+          {% if totalcompra == 0 %}
+          <br>
+          <p>
+            <div class="alert alert-info" role="alert">
+              No hay ningún artículo para comprar
+              </div>
+          </p>
+          <br>
+          {% else %}
+          <div class="row setup-content" id="step-1">
+            <div class="col-lg-12">
+              <br>
+              <h3> <center>Paso 1: Cantidad Tarjetas</center></h3>
+              <br>
+              <center>
+                <h3>
+                  Cantidad de Tarjetas
+                </h3>
+              </center>
+              <br>
+              <center>
+              <form method='post' id='cuantas' name='cuantas' class='login-form'>
+              {% csrf_token %}
+                <center>
+                  <div class="row">
+                  
+                    <div class="col-md-6 col-sm-4 col-xs-12">
+                      <center>
+                        <h2>
+                          Débito
+                        </h2>
+                      </center>
+                      <br>
+                      <div class="form-group">
+                        <label for="cuantasDebito">¿Cuántas tarjetas débito desea usar?</label>
+                        <input type="number" min="0" max="3"  name="cuantasDebito" id="cuantasDebito" class="form-control" placeholder="¿Cuántas tarjetas débito desea usar?" value="{{ numeroDebito }}" onkeypress="return isNumberKey(event);">
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-4 col-xs-12">
+                      <center>
+                        <h2>
+                          Crédito
+                        </h2>
+                      </center>
+                      <br>
+                      <div class="form-group">
+                        <label for="cuantasCredito">¿Cuántas tarjetas crédito desea usar?</label>
+                        <input type="number" min="0" max="3"  name="cuantasCredito" id="cuantasCredito" class="form-control" placeholder="¿Cuántas tarjetas crédito desea usar?" value="{{ numeroCredito }}" onkeypress="return isNumberKey(event);">
+                      </div>
+                    </div>
+                  </div>
+                </center>
+                <center>
+                  <button type="submit" class="btn btn-primary mb-2">Confirmar número de tarjetas</button>
+                </center>
+              <br>
+              {% if cantidadValida %}
+                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+              {% else %}
+                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" disabled>Next</button>
+              {% endif %}
+              </form>
+            </div>  
+          </div>
+          <form  class='login-form' id="venta" name="venta" method="post">
+            {% csrf_token %}
+            <div class="row setup-content" id="step-2">
+              <div class="col-lg-12">
+                <br>
+                <h3><center>Paso 2: Medios de Pago</center></h3>
+                <!--form dinamico para tipos tarjetas-->
+                  <div class="row">
+                    <center>
+                    <div class="col-md-6 col-sm-4 col-xs-12">
+                      {% for iteracion in rangeDebito %}
+                        <br>
+                        <center>
+                          <h3>
+                            Tarjeta débito número {{iteracion}}
+                          </h3>
+                        </center>
+                        <br>
+                        <div class="form-group">
+                          <label for="numeroDebito">Número de tarjeta</label>
+                          <input required="required" type="text" name="numDebito" id="numeroDebito" class="form-control" placeholder="Número de tarjeta" value="" onkeypress="return isNumberKey(event);">
+                        </div>
+                        <div class="form-group">
+                          <label for="ahorros">¿Es una cuenta tipo?</label>
+                          <select class="form-control" id="Dahorros" name="Dahorros">
+                            <option value="-1">--</option>
+                            <option value="Ahorros">Ahorros</option>
+                            <option value="Corriente">Corriente</option>
+                          </select>                   
+                        </div>
+                        <div class="form-group">
+                          <label for="porcentaje">Porcentaje de pago</label>
+                          <input required="required" type="number" min="1" max="100"  name="Dporcentaje" id="porcentaje" class="form-control" placeholder="Porcentaje de pago" value="" onkeypress="return verificarPorcentaje();">
+                        </div>
+                        {% empty %}
+                        <br>
+                        <p>No se ha indicado el número de tarjetas débito con las que se pagará</p>
+                      {% endfor %}
+                    </div>
+                    <div class="col-md-6 col-sm-4 col-xs-12">
+                      {% for iteracion in rangeCredito %}
+                        <br>
+                        <center>
+                          <h3>  
+                            Tarjeta crédito número {{iteracion}}
+                          </h3>
+                        </center>
+                        <br>
+                        <div class="form-group">
+                          <label for="numeroTarjeta">Número de tarjeta:</label>
+                          <input required="required" type="text" name="CnumTarjeta" id="numeroTarjeta" class="form-control" placeholder="Número de tarjeta" value="" onkeypress="return isNumberKey(event);">
+                        </div>
+                        <div class="form-group">
+                          <label for="numeroAprobacion">Número de aprobación:</label>
+                          <input required="required" type="text" name="CnumAprobacion" id="numeroAprobacion" class="form-control" placeholder="Número de aprobación" value="">
+                        </div>
+                        <div class="form-group">
+                          <label for="entidad">Entidad que aprobó:</label>
+                          <select class="form-control" id="entidad" name="entidad">
+                            <option value="-1">--</option>
+                            <option value="VI">VISA</option>
+                            <option value="CA">MASTERCARD</option>
+                            <option value="AX">AMERICANEXPRESS</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="Ccuotas">Cuotas</label>
+                          <input type="number" name="Ccuotas" id="Ccuotas" min="1" max="36" class="form-control" placeholder="Número de cuotas" value="" onkeypress="return isNumberKey(event);">
+                        </div>
+                        <div class="form-group">
+                          <label for="porcentaje">Porcentaje de pago:</label>
+                          <input type="number" min="1" max="100"  name="Cporcentaje" id="porcentaje" class="form-control" placeholder="Porcentaje de pago" value="" onkeypress="return verificarPorcentaje();">
+                        </div>
+                        {% empty %}
+                        <br>
+                        <p>No se ha indicado el número de tarjetas crédito con las que se pagará</p>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </center>
+              
+              <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+            </div>
+          </div>
+          <div class="row setup-content" id="step-3">
+            <div class="col-md-12">
+              <br>
+              <br>
+              <h3><center>Paso 3: Información envio</center></h3>
+              <br>
+              <div class="block">
+              <label for='nombre'>Usuario:  </label>
+              <p id='nombre'>{{nombre}}</p>
+              </div>
+              <br>
+              <div class="form-group">
+                <label class="control-label" for='direccion'>Dirección Destino:</label>
+                <input required="required" class='form-control' maxlength="100" type="text" name="direccion" id='direccion' placeholder="Destino" />
+              </div>
+              <div class="form-group">
+                  <label for="Ciudad">Ciudad Destino:</label>
+                    <select class="form-control" id="ciudad" name="ciudad">
+                      <option value="BOG">Bogotá</option>
+                      <option value="MED">Medellín</option>
+                      <option value="CALI">Cali</option>
+                      <option value="B/Q">Barranquilla</option>
+                      <option value="CART">Cartagena</option>
+                      <option value="CUC">Cucuta</option>
+                      <option value="SOL">Soledad</option>
+                      <option value="IBG">Ibague</option>
+                      <option value="BCM">Bucaramanga</option>
+                      <option value="SOAC">Soacha</option>
+                    </select>
+              </div>
+              <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+            </div>
+          </div>
+          <div class="row setup-content" id="step-4">
+              <div class="col-md-12">
+                <br>
+                <br>
+                <h3><center>Paso 4: Información adicional</center></h3>
+                <br>
+                <div class="block">
+                <label for='nombre'>Usuario:  </label>
+                <p id='nombre'>{{nombre}}</p>
+                </div>
+                <br>
+                <div class='block'>
+                  <h4>
+                    <label>SubTotal:  </label>
+                    <span>{{totalcompra}}</span>
+                  </h4>
+                  <br>
+                  <p>El subtotal actual puede verse alterado por gastos de envio </p>
+                  <br>
+                  <p>Los productos se encuentran en:</p>
+                  <br>
+                  <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col"><center>Producto</center></th>
+                          <th scope="col"><center>Ciudad</center></th>
+                        </tr>
+                        <tbody>
+                        {% for carrito in productosCarrito %}
+                        <tr>
+                          <td> <center>{{carrito.fkDetalleProducto.fkProducto.nombre}}</center></td>
+                          <td> <center>{{ carrito.fkDetalleProducto.fkBodega.ciudad }}</center></td>
+                        </tr>
+                      </tbody>
+                    {% endfor %}
+                  </table>
+                </div>
+                <button type="submit" class="btn btn-success btn-lg pull-right" onclick="form.submit();" id="venta-submit" name="venta-submit">Enviar</button>
+              </div>
+            </div>
+          </form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+  function isNumberKey(evt){
+      var charCode = (evt.which) ? evt.which : evt.keyCode
+      return !(charCode > 31 && (charCode < 48 || charCode > 57));
+  }
+  function verificarPorcentaje() {
+    let num = document.getElementsByName("porcentaje")[0].value;
+    if (num>=0 && num<=100) {
+      document.getElementsByName("porcentaje")[0].value = num;
+    }
+  }
+
+  $(document).ready(function () {
+  var navListItems = $('div.setup-panel div a'),
+          allWells = $('.setup-content'),
+          allNextBtn = $('.nextBtn');
+
+  allWells.hide();
+
+  navListItems.click(function (e) {
+      e.preventDefault();
+      var $target = $($(this).attr('href')),
+              $item = $(this);
+
+      if (!$item.hasClass('disabled')) {
+          navListItems.removeClass('btn-primary').addClass('btn-default');
+          $item.addClass('btn-primary');
+          allWells.hide();
+          $target.show();
+          $target.find('input:eq(0)').focus();
+      }
+  });
+
+  allNextBtn.click(function(){
+      var curStep = $(this).closest(".setup-content"),
+          curStepBtn = curStep.attr("id"),
+          nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+          curInputs = curStep.find("input[type='text'],input[type='url']"),
+          isValid = true;
+
+      $(".form-group").removeClass("has-error");
+      for(var i=0; i<curInputs.length; i++){
+          if (!curInputs[i].validity.valid){
+              isValid = false;
+              $(curInputs[i]).closest(".form-group").addClass("has-error");
+          }
+      }
+
+      if (isValid)
+          nextStepWizard.removeAttr('disabled').trigger('click');
+  });
+
+  $('div.setup-panel div a.btn-primary').trigger('click');
+});
+
+</script>
+
+{% endblock %}

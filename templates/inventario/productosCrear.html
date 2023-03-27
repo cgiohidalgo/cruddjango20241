@@ -1,0 +1,108 @@
+{% extends 'baseAdmin.html' %}
+
+
+{% block content %}
+
+<div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Añadir Productos </h1>
+      </center>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        <form id="formulario-producto" action="#" method="post">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="producto">Producto</label>
+            <select class="form-control" id="producto" name="producto">
+              <option value="-1"  name='vacio'>Producto</option>
+              {% for producto in productos %}
+                <option value={{producto.pkProducto}} name={{producto.pkProducto}}>{{producto.pkProducto}} - {{producto.nombre}}</option>
+                {% empty %}
+                {% endfor %}
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="proveedor">Proveedor</label>
+            <select class="form-control" id="proveedor" name="proveedor">
+              <option value="-1"  name='vacio'>Proveedor</option>
+              {% for proveedor in proveedores %}
+                <option value={{proveedor.pknit}} name={{proveedor.pknit}}>{{proveedor.pknit}}</option>
+                {% empty %}
+                {% endfor %}
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="bodega">Bodega</label>
+            <select class="form-control" id="bodega" name="bodega">
+              <option value="-1"  name='vacio'>Bodega</option>
+              {% for bodega in bodegas %}
+                <option value={{bodega.pkBodega}} name={{bodega.pkBodega}}>{{bodega.pkBodega}} - {{bodega.ciudad}}</option>
+                {% empty %}
+                {% endfor %}
+            </select>
+            </div>
+
+          <div class="form-group">
+            <label for="talla">Talla</label>
+            <select class="form-control" id="talla" name="talla">{
+                  ('XS','xs'),
+                  ('S','s'),
+                  ('M','m'),                  
+                  ('L','l'),
+                  ('XL','xl'),
+              }
+                <option value="XS">xs</option>
+                <option value="S">s</option>
+                <option value="M">m</option>                
+                <option value="L">l</option>
+                <option value="XL">xl</option>
+            </select>
+          </div>          
+
+          <div class="form-group">
+            <label for="inputColor">Color</label>
+            <select class="form-control" id="inputColor" name="inputColor">
+              <option value="Negro">Negro</option>
+              <option value="Blanco">Blanco</option>
+              <option value="Amarillo">Amarillo</option>
+              <option value="Azul">Azul</option>
+              <option value="Rojo">Rojo</option>
+              <option value="Verde">Verde</option>
+              <option value="Morado">Morado</option>
+              <option value="Naranja">Naranja</option>
+              <option value="Rosado">Rosado</option>
+              <option value="Gris">Gris</option>
+              <option value="Marron">Marrón</option>
+              <option value="Beige">Beige</option>
+              <option value="Otros">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="inputCant">Cantidad</label>
+            <input id="inputCant" name="inputCant" type="number" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                <input type="submit" name="productos-submit" id="productos-submit" tabindex="4" class="form-control btn" value="Agregar Productos">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

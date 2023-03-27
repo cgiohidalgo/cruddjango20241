@@ -1,0 +1,74 @@
+{% extends 'baseAdmin.html' %}
+
+{% block head %}
+
+{% load static %}
+
+<script src="{% static 'graficos/plotly.js' %}"></script>
+
+<script src="{% static 'css/registroCliente/jquery-3.3.1.slim.min.js' %}"></script>
+
+
+{% endblock %}
+
+{% block content %}
+<div class="col-md-8 col-md-offset-2">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Productos vs Clientes </h1>
+      </center>
+    </div>
+  </div>
+  
+  <div class="panel-body">
+    <form id="login-form" name='reporte' method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="clientes">Cliente:</label>
+        <select class="form-control" id="clientes" name="clientes">
+          {% if clientes %}
+          <option value=""> --- No hay clientes --- </option>
+            {% for cliente in clientes %}
+            <option value="{{cliente.nombre}}">{{cliente.nombre}} </option>
+            {% endfor %}
+          {% else %}
+          <option value=""> --- No hay clientes --- </option>
+          {% endif %}
+        </select>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3">
+              <input type="submit" name="generar-submit" id="generar-submit" tabindex="4" class="form-control btn btn-register" value="reporteProductosCliente">
+          </div>
+        </div>
+      </div>
+    </form>
+    {% if datay %}
+      <center><div id="tester" style="width:600px;height:250px;"></div></center>
+      <script>
+        TESTER = document.getElementById('tester');
+        Plotly.plot( TESTER, [
+            {
+              x:{{datax|safe}},
+              y:{{datay}},
+              type: 'bar'
+            }
+          ], 
+          {
+            margin: { t: 0 } 
+          } 
+        );
+      </script>
+      {% else %}
+        <div class="alert alert-info" role="alert">
+          El cliente no a realizado compras
+        </div> 
+    {% endif %}
+  </div>
+</div>
+
+
+{% endblock %}

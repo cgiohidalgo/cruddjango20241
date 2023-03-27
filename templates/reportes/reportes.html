@@ -1,0 +1,55 @@
+{% extends 'baseAdmin.html' %}
+
+
+{% block head %}
+
+{% load static %}
+
+<script src="{% static 'graficos/plotly.js' %}"></script>
+
+<script src="{% static 'css/registroCliente/jquery-3.3.1.slim.min.js' %}"></script>
+
+<link rel="stylesheet" href="{% static 'css/registroCliente/datepicker.min.css' %}" />
+<script src="{% static 'css/registroCliente/datepicker.min.js' %}"></script>
+
+{% endblock %}
+
+{% block content %}
+<div class="col-md-6 col-md-offset-3">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> Reportes </h1>      
+      </center>
+    </div>
+  </div>
+  <form method="post" id="form" name="modificarAdmin">
+    {% csrf_token %} 
+    <div class="form-group">
+      <label for="tipoReporte">Ingrese el tipo de reporte</label>
+      <select class="form-control" id="tipoReporte" name="tipoReporte">
+        <option value=1>Reporte de Ventas</option>
+        <option value="reporteVentasCategoria">Reporte de Ventas por Categoría</option>
+        <option value="masVendidos">Reporte de Más Vendidos</option>
+        <option value="menosVendidos">Reporte de Menos Vendidos</option>
+        <option value="reporteVentas">Reporte de Ventas</option>
+        <option value="reporteProducto">Reporte por Producto</option>
+        <option value="reporteVentasCategoria">Reporte de Ventas por categoria</option>
+        <option value="reporteTopClientes">Top Clientes</option>
+        <option value="reporteCumpleañosCliente">Cumpleaños Clientes</option>
+        <option value="reporteProductosCliente">Productos vs Clientes</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <input type="submit" name="seleccionarReporte-submit" id="seleccionarReporte-submit"  class="form-control btn btn-login" value="Seleccionar">
+        </div>
+      </div>
+    </div>
+  </form>		
+</div>
+  
+{% endblock %}

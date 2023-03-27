@@ -1,0 +1,64 @@
+{% extends 'baseAdmin.html' %}
+{% block content %}
+
+{% load static %}
+
+
+<div class="col-md-8 col-md-offset-2">
+  <br>
+  <div class="panel-login panel">
+    <div class="panel-heading">
+      <center>
+        <h1> {{masOMenos}} Vendidos </h1>
+      </center>
+    </div>
+  </div>
+  
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>A continuación se muestran los 20 productos {{masOMenos}} Vendidos</h3>
+        <br>
+        {% if productos %}
+                
+        <div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"><center>Referencia</center></th>
+                <th scope="col"><center>Nombre</center></th>
+                <th scope="col"><center>Categoría</center></th>
+                <th scope="col"><center>Subcategoría</center></th>
+                <th scope="col"><center>Cantidad vendida</center></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for producto in productos %}
+                <tr>
+                  <td><center>{{producto.fkDetallesP__fkProducto__pkProducto}}</center></td>
+                  <td><center>{{producto.fkDetallesP__fkProducto__nombre}}</center></td>
+                  <td><center>{{producto.fkDetallesP__fkProducto__fkSubCategoria__nombreSubCategoria}}</center></td>
+                  <td><center>{{producto.fkDetallesP__fkProducto__fkSubCategoria__fkCategoria__nombreCategoria}}</center></td>
+                  <td><center>{{producto.total}}</center></td>
+                </tr>
+                {% empty %}
+                <p>No hay ventas</p>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+        {% else %}
+          <p>
+            <div class="alert alert-info" role="alert">
+              No hay ventas
+              </div>
+          </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
