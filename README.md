@@ -74,7 +74,6 @@ pip3 install psycopg2-binary==2.9.5
 - estructura: una clase para definir el nombre de la tabla y su atributos
 
 {% filename %}
-
     class Arepa(models.Model):  #nombre de la tabla en la Base de Datos
         nombre = models.CharField(max_length=100, default='DEFAULT VALUE')
         precio = models.CharField(max_length=20, default='DEFAULT VALUE')
