@@ -115,7 +115,8 @@ Cuando creamos este proyecto, Django nos generó un archivo llamado views.py (de
 from .models import Arepa
 
 #Instanciamos las vistas genéricas de Django
-from django.views.generic import ListView, DetailView from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView 
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 #Nos sirve para redireccionar despues de una acción revertiendo patrones de expresiones regulares
 from django.urls import reverse
